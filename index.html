@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grupo Dynamic — Agencia especializada en soluciones y producción de marketing en Madrid. Diseño, producción gráfica, eventos y audiovisual. +30 años de experiencia." />
+  <meta name="keywords" content="agencia marketing Madrid, diseño gráfico Madrid, producción gráfica, eventos corporativos, impresión gran formato, diseño stands, identidad corporativa, producción audiovisual, merchandising, Grupo Dynamic" />
+  <meta property="og:title" content="Grupo Dynamic | Agencia de Marketing y Producción en Madrid" />
+  <meta property="og:description" content="Damos vida a tus ideas. Diseño, producción gráfica, eventos y audiovisual con más de 30 años de experiencia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.grupodynamic.es" />
+  <title>Grupo Dynamic | Agencia Especializada en Soluciones y Producción de Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "Grupo Dynamic",
+    "description": "Agencia especializada en soluciones y producción de marketing",
+    "url": "https://www.grupodynamic.es",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C/ José Bergamin, 14",
+      "addressLocality": "Madrid",
+      "postalCode": "28030",
+      "addressCountry": "ES"
+    },
+    "telephone": "+34616573480",
+    "email": "a.olmedo@grupodynamic.es",
+    "foundingDate": "1994",
+    "areaServed": "ES",
+    "serviceType": ["Diseño gráfico", "Producción gráfica", "Eventos", "Producción audiovisual"]
+  }
+  </script>
+  <style>
+    /* ── VARIABLES ── */
+    :root {
+      --red:        #C0001A;
+      --red-dark:   #8B0000;
+      --red-light:  #E8001F;
+      --gold:       #F5A623;
+      --green:      #3CB34A;
+      --orange:     #E8611A;
+      --blue:       #1A9BD7;
+      --purple:     #8B3FAF;
+      --dark:       #1A1A1A;
+      --gray:       #6B7280;
+      --light-gray: #F4F4F4;
+      --white:      #FFFFFF;
+      --radius:     12px;
+      --shadow:     0 8px 32px rgba(0,0,0,.12);
+      --shadow-lg:  0 20px 60px rgba(0,0,0,.18);
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ── UTILITIES ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.2;
+    }
+    .section-subtitle {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--gray);
+      margin-top: .75rem;
+    }
+    .tag {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .75rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: rgba(192,0,26,.08);
+      border-radius: 100px;
+      padding: .35rem .9rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      padding: .9rem 2rem;
+      border-radius: 100px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+    }
+    .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(192,0,26,.35); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: var(--white);
+    }
+    .btn-outline:hover { background: var(--white); color: var(--red); transform: translateY(-2px); }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark);
+    }
+    .btn-gold:hover { background: #e09300; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,166,35,.4); }
+    .btn-whatsapp {
+      background: #25D366;
+      color: var(--white);
+    }
+    .btn-whatsapp:hover { background: #1db954; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,.4); }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal-left.visible { opacity: 1; transform: none; }
+    .reveal-right { opacity: 0; transform: translateX(30px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal-right.visible { opacity: 1; transform: none; }
+
+    /* ── NAVBAR ── */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: transparent;
+      transition: background var(--transition), box-shadow var(--transition);
+      padding: 1.2rem 0;
+    }
+    #navbar.scrolled {
+      background: var(--white);
+      box-shadow: 0 2px 20px rgba(0,0,0,.1);
+      padding: .8rem 0;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .nav-logo .logo-grupo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      transition: color var(--transition);
+    }
+    .nav-logo .logo-dynamic {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: var(--red);
+      letter-spacing: .02em;
+    }
+    #navbar.scrolled .nav-logo .logo-grupo { color: var(--dark); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: .875rem;
+      color: var(--white);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 100%;
+      height: 2px;
+      background: var(--red);
+      transition: right var(--transition);
+    }
+    .nav-links a:hover::after { right: 0; }
+    #navbar.scrolled .nav-links a { color: var(--dark); }
+    .nav-cta { display: flex; align-items: center; gap: 1rem; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: .5rem; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: var(--transition); }
+    #navbar.scrolled .hamburger span { background: var(--dark); }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--dark);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--white);
+    }
+    .mobile-menu a:hover { color: var(--red); }
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 60%, #5C0000 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(45deg, rgba(255,255,255,.04) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,.04) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,.04) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.04) 75%);
+      background-size: 60px 60px;
+      background-position: 0 0, 0 30px, 30px -30px, -30px 0;
+    }
+    .hero-glow {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,.08) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 8rem 0 4rem;
+      max-width: 720px;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,.15);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,.2);
+    }
+    .hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title span { color: var(--gold); }
+    .hero-desc {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: rgba(255,255,255,.85);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,.2);
+      flex-wrap: wrap;
+    }
+    .hero-stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.2rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: .875rem;
+      color: rgba(255,255,255,.75);
+      margin-top: .25rem;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      color: rgba(255,255,255,.6);
+      font-size: .75rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+    .hero-scroll svg { animation: bounce2 2s infinite; }
+    @keyframes bounce { 0%,100%{ transform: translateX(-50%) translateY(0); } 50%{ transform: translateX(-50%) translateY(-5px); } }
+    @keyframes bounce2 { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(4px); } }
+
+    /* ── TRUST BAR ── */
+    #trust {
+      background: var(--light-gray);
+      padding: 1.5rem 0;
+      overflow: hidden;
+    }
+    .trust-inner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .trust-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gray);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .trust-logos {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .trust-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      color: #9CA3AF;
+      transition: color var(--transition);
+      white-space: nowrap;
+    }
+    .trust-logo:hover { color: var(--red); }
+
+    /* ── ABOUT ── */
+    #about { padding: 6rem 0; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-card-main {
+      background: linear-gradient(135deg, var(--red-dark), var(--red));
+      border-radius: var(--radius);
+      padding: 3rem;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-card-main::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.06);
+    }
+    .about-quote {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--gold);
+      opacity: .5;
+    }
+    .about-card-main p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -20px; right: 2rem;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: .85rem;
+      padding: .75rem 1.25rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      white-space: nowrap;
+    }
+    .about-values {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .about-value {
+      background: var(--white);
+      border: 1px solid #E5E7EB;
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      transition: var(--transition);
+    }
+    .about-value:hover { border-color: var(--red); box-shadow: 0 4px 16px rgba(192,0,26,.08); transform: translateY(-2px); }
+    .about-value-icon {
+      font-size: 1.5rem;
+      margin-bottom: .5rem;
+    }
+    .about-value-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: .85rem;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .about-value-desc {
+      font-size: .8rem;
+      color: var(--gray);
+      margin-top: .3rem;
+      line-height: 1.5;
+    }
+    .about-text .section-title { margin-bottom: 1.5rem; }
+    .about-text p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+    .about-list { margin: 1.5rem 0 2rem; }
+    .about-list li {
+      display: flex;
+      gap: .75rem;
+      align-items: flex-start;
+      padding: .5rem 0;
+      font-size: .95rem;
+      color: var(--dark);
+    }
+    .about-list li::before {
+      content: '✓';
+      color: var(--red);
+      font-weight: 700;
+      margin-top: .1rem;
+      flex-shrink: 0;
+    }
+
+    /* ── PROBLEMS ── */
+    #problems {
+      background: var(--dark);
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #problems::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: linear-gradient(45deg, rgba(255,255,255,.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,.02) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,.02) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.02) 75%);
+      background-size: 40px 40px;
+    }
+    #problems .container { position: relative; }
+    #problems .section-title { color: var(--white); }
+    #problems .section-subtitle { color: rgba(255,255,255,.6); }
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .problem-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: var(--transition);
+    }
+    .problem-card:hover {
+      background: rgba(192,0,26,.15);
+      border-color: var(--red);
+      transform: translateY(-4px);
+    }
+    .problem-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .problem-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: .5rem;
+    }
+    .problem-desc { font-size: .9rem; color: rgba(255,255,255,.6); line-height: 1.6; }
+    .problem-solution {
+      margin-top: 1rem;
+      font-size: .85rem;
+      color: var(--gold);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+    }
+
+    /* ── SERVICES ── */
+    #services { padding: 6rem 0; }
+    .services-header { text-align: center; margin-bottom: 4rem; }
+    .services-tabs {
+      display: flex;
+      justify-content: center;
+      gap: .75rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .service-tab {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .85rem;
+      padding: .6rem 1.5rem;
+      border-radius: 100px;
+      border: 2px solid #E5E7EB;
+      background: transparent;
+      color: var(--gray);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .service-tab.active, .service-tab:hover {
+      border-color: var(--red);
+      background: var(--red);
+      color: var(--white);
+    }
+    .service-panel { display: none; }
+    .service-panel.active { display: block; }
+    .service-panel-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .service-panel-icon {
+      width: 64px; height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+    .service-panel-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+    .service-panel-subtitle { color: var(--gray); margin-top: .3rem; }
+    .service-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+    .service-item {
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border: 1px solid #E5E7EB;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 0;
+      transition: height var(--transition);
+    }
+    .service-item:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+    .service-item:hover::before { height: 100%; }
+    .service-item-icon { font-size: 1.5rem; margin-bottom: .75rem; }
+    .service-item-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      margin-bottom: .4rem;
+    }
+    .service-item-desc { font-size: .85rem; color: var(--gray); line-height: 1.5; }
+
+    /* Panel colors */
+    .panel-design .service-panel-icon { background: rgba(192,0,26,.1); color: var(--red); }
+    .panel-design .service-item::before { background: var(--red); }
+    .panel-production .service-panel-icon { background: rgba(59,179,74,.1); color: var(--green); }
+    .panel-production .service-item::before { background: var(--green); }
+    .panel-events .service-panel-icon { background: rgba(232,97,26,.1); color: var(--orange); }
+    .panel-events .service-item::before { background: var(--orange); }
+    .panel-av .service-panel-icon { background: rgba(26,155,215,.1); color: var(--blue); }
+    .panel-av .service-item::before { background: var(--blue); }
+
+    /* ── DIFFERENTIATORS ── */
+    #differentiators { background: var(--light-gray); padding: 6rem 0; }
+    .diff-header { text-align: center; margin-bottom: 4rem; }
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .diff-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .diff-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--red);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+    .diff-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .diff-card:hover::after { transform: scaleX(1); }
+    .diff-number {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 4rem;
+      color: rgba(192,0,26,.08);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .diff-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .diff-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: .75rem;
+    }
+    .diff-desc { font-size: .9rem; color: var(--gray); line-height: 1.7; }
+
+    /* ── CLIENTS ── */
+    #clients { padding: 6rem 0; }
+    .clients-header { text-align: center; margin-bottom: 3.5rem; }
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+    }
+    .client-item {
+      background: var(--light-gray);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      color: #9CA3AF;
+      min-height: 70px;
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+    .client-item:hover {
+      color: var(--red);
+      border-color: var(--red);
+      background: rgba(192,0,26,.04);
+      transform: scale(1.03);
+    }
+
+    /* ── PROCESS ── */
+    #process { background: var(--light-gray); padding: 6rem 0; }
+    .process-header { text-align: center; margin-bottom: 4rem; }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 12.5%; right: 12.5%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--red), var(--gold));
+      z-index: 0;
+    }
+    .process-step {
+      text-align: center;
+      padding: 0 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .process-step-num {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 3px solid var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: var(--red);
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 4px 20px rgba(192,0,26,.2);
+      transition: var(--transition);
+    }
+    .process-step:hover .process-step-num {
+      background: var(--red);
+      color: var(--white);
+      transform: scale(1.1);
+    }
+    .process-step-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: .5rem;
+    }
+    .process-step-desc { font-size: .85rem; color: var(--gray); line-height: 1.6; }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { padding: 6rem 0; }
+    .testimonials-header { text-align: center; margin-bottom: 4rem; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid #E5E7EB;
+      border-radius: var(--radius);
+      padding: 2rem;
+      position: relative;
+      transition: var(--transition);
+    }
+    .testimonial-card:hover { box-shadow: var(--shadow); border-color: var(--red); transform: translateY(-3px); }
+    .testimonial-stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; }
+    .testimonial-text {
+      font-size: .95rem;
+      color: var(--gray);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .testimonial-text::before { content: '"'; color: var(--red); font-size: 2rem; line-height: .5; vertical-align: -0.5rem; margin-right: .2rem; }
+    .testimonial-author { display: flex; align-items: center; gap: .75rem; }
+    .testimonial-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      color: var(--white);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .testimonial-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+    .testimonial-role { font-size: .8rem; color: var(--gray); }
+
+    /* ── FAQ ── */
+    #faq { background: var(--light-gray); padding: 6rem 0; }
+    .faq-header { text-align: center; margin-bottom: 3.5rem; }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      border: 1px solid #E5E7EB;
+      transition: border-color var(--transition);
+    }
+    .faq-item.open { border-color: var(--red); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+      gap: 1rem;
+    }
+    .faq-question-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--dark);
+    }
+    .faq-chevron {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--red);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform var(--transition);
+      font-size: .75rem;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-answer-inner {
+      padding: 0 1.5rem 1.25rem;
+      font-size: .9rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* ── CTA FINAL ── */
+    #cta {
+      background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 100%);
+      padding: 6rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(45deg, rgba(255,255,255,.03) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,.03) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,.03) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.03) 75%);
+      background-size: 60px 60px;
+    }
+    .cta-inner {
+      position: relative;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .cta-inner .section-title { color: var(--white); margin-bottom: 1rem; }
+    .cta-inner p { color: rgba(255,255,255,.8); font-size: 1.1rem; margin-bottom: 2.5rem; }
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .cta-trust {
+      margin-top: 2rem;
+      color: rgba(255,255,255,.6);
+      font-size: .85rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .cta-trust span { display: flex; align-items: center; gap: .4rem; }
+
+    /* ── CONTACT MODAL ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.6);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition);
+      backdrop-filter: blur(4px);
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 520px;
+      position: relative;
+      transform: scale(.95);
+      transition: transform var(--transition);
+    }
+    .modal-overlay.open .modal { transform: scale(1); }
+    .modal-close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: var(--light-gray);
+      border: none;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--transition);
+    }
+    .modal-close:hover { background: var(--red); color: var(--white); }
+    .modal-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      margin-bottom: .5rem;
+    }
+    .modal-subtitle { color: var(--gray); font-size: .9rem; margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: .8rem;
+      color: var(--dark);
+      margin-bottom: .4rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: .75rem 1rem;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 8px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: .9rem;
+      color: var(--dark);
+      background: var(--white);
+      transition: border-color var(--transition);
+      outline: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--red); }
+    .form-textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit {
+      width: 100%;
+      padding: 1rem;
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      border-radius: 100px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+    }
+    .form-submit:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(192,0,26,.35); }
+    .form-note { font-size: .75rem; color: var(--gray); text-align: center; margin-top: 1rem; }
+    .form-success {
+      text-align: center;
+      padding: 2rem;
+      display: none;
+    }
+    .form-success.show { display: block; }
+    .form-success-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .form-success h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      margin-bottom: .5rem;
+    }
+
+    /* ── FOOTER ── */
+    #footer {
+      background: var(--dark);
+      color: var(--white);
+      padding: 4rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-brand .logo-grupo { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; color: rgba(255,255,255,.6); }
+    .footer-brand .logo-dynamic { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--red); }
+    .footer-desc { font-size: .875rem; color: rgba(255,255,255,.5); margin-top: 1rem; line-height: 1.7; }
+    .footer-socials { display: flex; gap: .75rem; margin-top: 1.5rem; }
+    .footer-social {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.06);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem;
+      transition: var(--transition);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    .footer-social:hover { background: var(--red); border-color: var(--red); }
+    .footer-col-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 1.25rem;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: .6rem; }
+    .footer-links a { font-size: .875rem; color: rgba(255,255,255,.6); transition: color var(--transition); }
+    .footer-links a:hover { color: var(--white); }
+    .footer-contact-item { display: flex; gap: .75rem; align-items: flex-start; margin-bottom: .75rem; }
+    .footer-contact-icon { color: var(--red); flex-shrink: 0; margin-top: .1rem; }
+    .footer-contact-text { font-size: .875rem; color: rgba(255,255,255,.6); line-height: 1.5; }
+    .footer-contact-text a { color: rgba(255,255,255,.6); transition: color var(--transition); }
+    .footer-contact-text a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p { font-size: .8rem; color: rgba(255,255,255,.35); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: .8rem; color: rgba(255,255,255,.35); transition: color var(--transition); }
+    .footer-legal a:hover { color: var(--white); }
+
+    /* ── WHATSAPP FLOAT ── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .whatsapp-bubble {
+      background: var(--white);
+      border-radius: 100px;
+      padding: .6rem 1rem;
+      box-shadow: var(--shadow);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: .8rem;
+      color: var(--dark);
+      transform: translateX(10px);
+      opacity: 0;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .whatsapp-float:hover .whatsapp-bubble { transform: translateX(0); opacity: 1; }
+    .whatsapp-btn-float {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.5);
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+    .whatsapp-btn-float:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,.6); }
+    .whatsapp-btn-float svg { width: 28px; height: 28px; fill: white; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-visual { order: -1; }
+      .clients-grid { grid-template-columns: repeat(4, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .process-steps::before { display: none; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero-stats { gap: 1.5rem; }
+      .hero-stat-num { font-size: 1.8rem; }
+      .clients-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .about-values { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .clients-grid { grid-template-columns: repeat(2, 1fr); }
+      .diff-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<header id="navbar" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Navegación principal">
+      <a href="#hero" class="nav-logo" aria-label="Grupo Dynamic - inicio">
+        <span class="logo-grupo">GRUPO</span>
+        <span class="logo-dynamic">DYNAMIC</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#clients">Clientes</a></li>
+        <li><a href="#process">Proceso</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="btn btn-primary" onclick="openModal()" aria-label="Solicitar presupuesto">Solicitar presupuesto</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ── MOBILE MENU ── -->
+<nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menú móvil">
+  <button class="mobile-close" onclick="toggleMenu()" aria-label="Cerrar menú">✕</button>
+  <a href="#about" onclick="toggleMenu()">Nosotros</a>
+  <a href="#services" onclick="toggleMenu()">Servicios</a>
+  <a href="#clients" onclick="toggleMenu()">Clientes</a>
+  <a href="#process" onclick="toggleMenu()">Proceso</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <button class="btn btn-primary" onclick="toggleMenu(); openModal()">Solicitar presupuesto</button>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="hero-bg-pattern" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-tag" aria-label="Categoría">Agencia de Marketing · Madrid</span>
+      <h1 class="hero-title" id="hero-title">
+        Damos vida a<br>
+        <span>tus ideas</span><br>
+        de marketing
+      </h1>
+      <p class="hero-desc">
+        Somos la agencia especializada en soluciones y producción de marketing
+        que necesita tu empresa. Diseño, impresión, eventos y audiovisual:
+        todo bajo un mismo techo, con más de 30 años de experiencia.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-gold" onclick="openModal()">
+          Quiero un presupuesto gratis
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="https://wa.me/34616573480?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20vuestros%20servicios" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats" role="list" aria-label="Estadísticas destacadas">
+        <div role="listitem">
+          <div class="hero-stat-num">+30</div>
+          <div class="hero-stat-label">Años de experiencia</div>
+        </div>
+        <div role="listitem">
+          <div class="hero-stat-num">+15</div>
+          <div class="hero-stat-label">Grandes marcas</div>
+        </div>
+        <div role="listitem">
+          <div class="hero-stat-num">4</div>
+          <div class="hero-stat-label">Áreas de servicio</div>
+        </div>
+        <div role="listitem">
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label">Compromiso con tu idea</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#trust" class="hero-scroll" aria-label="Desplazar hacia abajo">
+    <span>Scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<section id="trust" aria-label="Clientes destacados">
+  <div class="container">
+    <div class="trust-inner">
+      <span class="trust-label">Confían en nosotros:</span>
+      <div class="trust-logos" role="list">
+        <span class="trust-logo" role="listitem">Havaianas</span>
+        <span class="trust-logo" role="listitem">Tommy Hilfiger</span>
+        <span class="trust-logo" role="listitem">Avis</span>
+        <span class="trust-logo" role="listitem">Budget</span>
+        <span class="trust-logo" role="listitem">CEU San Pablo</span>
+        <span class="trust-logo" role="listitem">Aldo</span>
+        <span class="trust-logo" role="listitem">Drop Shot</span>
+        <span class="trust-logo" role="listitem">Wanabet</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-card-main">
+          <div class="about-quote">"</div>
+          <p>Somos un equipo dedicado a darte soluciones en tu área de marketing, y junto a ti, <strong>daremos vida a tus ideas</strong>. Con nosotros no existen los "pero" ni los "no se puede": siempre encontramos la solución.</p>
+          <div class="about-badge">+30 años en el sector 🏆</div>
+        </div>
+        <div class="about-values">
+          <div class="about-value reveal" style="transition-delay:.1s">
+            <div class="about-value-icon">🤝</div>
+            <div class="about-value-title">Compromiso</div>
+            <div class="about-value-desc">100% dedicados a hacer realidad tus ideas.</div>
+          </div>
+          <div class="about-value reveal" style="transition-delay:.2s">
+            <div class="about-value-icon">👥</div>
+            <div class="about-value-title">Compañerismo</div>
+            <div class="about-value-desc">Codo a codo contigo en cada momento.</div>
+          </div>
+          <div class="about-value reveal" style="transition-delay:.3s">
+            <div class="about-value-icon">⚡</div>
+            <div class="about-value-title">Dynamismo</div>
+            <div class="about-value-desc">Respuestas rápidas y eficientes que potencian tu negocio.</div>
+          </div>
+          <div class="about-value reveal" style="transition-delay:.4s">
+            <div class="about-value-icon">🔒</div>
+            <div class="about-value-title">Confianza</div>
+            <div class="about-value-desc">Siempre disponibles cuando surge una idea.</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <span class="tag">¿Quiénes somos?</span>
+        <h2 class="section-title" id="about-title">Tu equipo creativo especializado en marketing</h2>
+        <p>Grupo Dynamic es una agencia especializada en <strong>soluciones y producción de marketing</strong> con sede en Madrid. Desde el diseño de identidad corporativa hasta la producción de eventos a gran escala, somos el socio estratégico que tu marca necesita.</p>
+        <p>Nuestro equipo multidisciplinar combina más de tres décadas de experiencia con una actitud innovadora y creativa, siempre orientada a <strong>hacer crecer tu negocio</strong>.</p>
+        <ul class="about-list">
+          <li>Equipo creativo con más de 30 años de experiencia en el sector</li>
+          <li>Soluciones integrales de diseño, producción, eventos y audiovisual</li>
+          <li>Instalación y montajes en toda España</li>
+          <li>Partners estratégicos para que todo sea posible</li>
+          <li>Atención personalizada y compromiso 100% con tu proyecto</li>
+        </ul>
+        <button class="btn btn-primary" onclick="openModal()">
+          Cuéntanos tu proyecto
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEMS ── -->
+<section id="problems" aria-labelledby="problems-title">
+  <div class="container">
+    <div class="reveal" style="text-align:center; margin-bottom:1rem;">
+      <span class="tag" style="background:rgba(245,166,35,.15); color:var(--gold);">El problema</span>
+    </div>
+    <h2 class="section-title reveal" style="text-align:center; color:var(--white);" id="problems-title">¿Te suena alguno de estos problemas?</h2>
+    <p class="section-subtitle reveal" style="text-align:center; color:rgba(255,255,255,.55); max-width:560px; margin:1rem auto 0;">Muchas empresas lo sufren en silencio. Nosotros los resolvemos.</p>
+    <div class="problems-grid">
+      <div class="problem-card reveal" style="transition-delay:.1s">
+        <div class="problem-icon">😰</div>
+        <div class="problem-title">Imagen de marca inconsistente</div>
+        <div class="problem-desc">Tus materiales de marketing no transmiten coherencia ni profesionalidad.</div>
+        <div class="problem-solution">→ Diseño corporativo integral</div>
+      </div>
+      <div class="problem-card reveal" style="transition-delay:.2s">
+        <div class="problem-icon">🐌</div>
+        <div class="problem-title">Proveedores lentos e inflexibles</div>
+        <div class="problem-desc">Los plazos no se cumplen y los cambios de última hora se convierten en un problema.</div>
+        <div class="problem-solution">→ Dynamismo: respuestas rápidas</div>
+      </div>
+      <div class="problem-card reveal" style="transition-delay:.3s">
+        <div class="problem-icon">🗂️</div>
+        <div class="problem-title">Demasiados proveedores distintos</div>
+        <div class="problem-desc">Gestionar impresión, diseño, eventos y audiovisual con agencias diferentes es caótico.</div>
+        <div class="problem-solution">→ Solución 360° bajo un mismo techo</div>
+      </div>
+      <div class="problem-card reveal" style="transition-delay:.4s">
+        <div class="problem-icon">💸</div>
+        <div class="problem-title">Materiales sin impacto en ventas</div>
+        <div class="problem-desc">Inviertes en impresión y diseño pero no ves retorno ni atracción en el punto de venta.</div>
+        <div class="problem-solution">→ Marketing en punto de venta</div>
+      </div>
+      <div class="problem-card reveal" style="transition-delay:.5s">
+        <div class="problem-icon">📸</div>
+        <div class="problem-title">Eventos sin cobertura profesional</div>
+        <div class="problem-desc">Organizas eventos pero no cuentas con producción audiovisual, iluminación ni stands impactantes.</div>
+        <div class="problem-solution">→ Gestión integral de eventos</div>
+      </div>
+      <div class="problem-card reveal" style="transition-delay:.6s">
+        <div class="problem-icon">🌐</div>
+        <div class="problem-title">Presencia online desactualizada</div>
+        <div class="problem-desc">Tu web no refleja quién eres realmente ni convierte visitas en clientes.</div>
+        <div class="problem-solution">→ Diseño web sin límites</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="services-header reveal">
+      <span class="tag">Nuestros servicios</span>
+      <h2 class="section-title" id="services-title">Todo lo que tu marca necesita, en un solo lugar</h2>
+      <p class="section-subtitle" style="max-width:540px; margin: .75rem auto 0;">Cuatro grandes áreas de especialización diseñadas para potenciar tu negocio.</p>
+    </div>
+    <div class="services-tabs reveal" role="tablist" aria-label="Áreas de servicio">
+      <button class="service-tab active" onclick="switchTab('design')" role="tab" aria-selected="true" aria-controls="panel-design">🎨 Diseño</button>
+      <button class="service-tab" onclick="switchTab('production')" role="tab" aria-selected="false" aria-controls="panel-production">🖨️ Producción Gráfica</button>
+      <button class="service-tab" onclick="switchTab('events')" role="tab" aria-selected="false" aria-controls="panel-events">🎉 Eventos</button>
+      <button class="service-tab" onclick="switchTab('av')" role="tab" aria-selected="false" aria-controls="panel-av">🎬 Audiovisual</button>
+    </div>
+
+    <!-- DISEÑO -->
+    <div class="service-panel panel-design active" id="panel-design" role="tabpanel">
+      <div class="service-panel-header reveal">
+        <div class="service-panel-icon">🎨</div>
+        <div>
+          <div class="service-panel-title">Diseño</div>
+          <div class="service-panel-subtitle">Creamos identidades visuales que conectan con tu audiencia y convierten.</div>
+        </div>
+      </div>
+      <div class="service-items">
+        <div class="service-item reveal" style="transition-delay:.05s">
+          <div class="service-item-icon">👁️</div>
+          <div class="service-item-title">Diseño Corporativo</div>
+          <div class="service-item-desc">Para la imagen de marca es básico tener coherencia. Te damos la identidad que mereces.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.1s">
+          <div class="service-item-icon">💻</div>
+          <div class="service-item-title">Diseño Web</div>
+          <div class="service-item-desc">Tu escaparate online. Déjalo todo en nuestras manos: no hay límites.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.15s">
+          <div class="service-item-icon">✏️</div>
+          <div class="service-item-title">Diseño Gráfico</div>
+          <div class="service-item-desc">La cocina de ideas donde la creatividad fluye y crea tus conceptos.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.2s">
+          <div class="service-item-icon">🏛️</div>
+          <div class="service-item-title">Stands</div>
+          <div class="service-item-desc">¿Tienes un evento y necesitas una imagen 3D de cómo sería tu stand? Lo hacemos.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.25s">
+          <div class="service-item-icon">📰</div>
+          <div class="service-item-title">Revistas y Catálogos</div>
+          <div class="service-item-desc">Vamos a dar vida a tus publicaciones. Tu escaparate de bolsillo.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.3s">
+          <div class="service-item-icon">📝</div>
+          <div class="service-item-title">Naming e Identidad</div>
+          <div class="service-item-desc">Fundamental para tu imagen de marca. Plasmaremos en él tus valores.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.35s">
+          <div class="service-item-icon">📋</div>
+          <div class="service-item-title">Papelería Corporativa</div>
+          <div class="service-item-desc">Marquemos la diferencia, incluso en una nota.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.4s">
+          <div class="service-item-icon">📚</div>
+          <div class="service-item-title">Brandbooks</div>
+          <div class="service-item-desc">Transmitir los valores de la marca con conceptos claros y creatividad.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.45s">
+          <div class="service-item-icon">📄</div>
+          <div class="service-item-title">Folletos e Informes</div>
+          <div class="service-item-desc">La promoción fomenta ventas. Un informe detallado y atractivo es perfecto.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCCIÓN GRÁFICA -->
+    <div class="service-panel panel-production" id="panel-production" role="tabpanel">
+      <div class="service-panel-header reveal">
+        <div class="service-panel-icon">🖨️</div>
+        <div>
+          <div class="service-panel-title">Producción Gráfica y Digital</div>
+          <div class="service-panel-subtitle">Del concepto a la realidad. Imprimimos tu éxito en pequeño y gran formato.</div>
+        </div>
+      </div>
+      <div class="service-items">
+        <div class="service-item reveal" style="transition-delay:.05s">
+          <div class="service-item-icon">🏗️</div>
+          <div class="service-item-title">Creación de Stands</div>
+          <div class="service-item-desc">Las tecnologías evolucionan y nosotros con ellas. Stands a medida.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.1s">
+          <div class="service-item-icon">⚙️</div>
+          <div class="service-item-title">Producción Offset</div>
+          <div class="service-item-desc">Del concepto a la realidad: nosotros lo hacemos posible.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.15s">
+          <div class="service-item-icon">🖨️</div>
+          <div class="service-item-title">Impresión Digital</div>
+          <div class="service-item-desc">Pequeño y gran formato: el tamaño, la cantidad y la calidad importan.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.2s">
+          <div class="service-item-icon">🚚</div>
+          <div class="service-item-title">Instalación y Montajes</div>
+          <div class="service-item-desc">Instalación y montajes en toda España. Nos desplazamos hasta donde tú estés.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.25s">
+          <div class="service-item-icon">🏪</div>
+          <div class="service-item-title">Promoción PPV</div>
+          <div class="service-item-desc">¿Tienes tienda? Hagámosla atractiva para aumentar las ventas en el punto de venta.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.3s">
+          <div class="service-item-icon">🎁</div>
+          <div class="service-item-title">Merchandising</div>
+          <div class="service-item-desc">Proyectemos tu marca, fidelicemos clientes y traigamos nuevos.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVENTOS -->
+    <div class="service-panel panel-events" id="panel-events" role="tabpanel">
+      <div class="service-panel-header reveal">
+        <div class="service-panel-icon">🎉</div>
+        <div>
+          <div class="service-panel-title">Eventos</div>
+          <div class="service-panel-subtitle">Concéntrate en tus clientes y nosotros nos ocupamos del resto.</div>
+        </div>
+      </div>
+      <div class="service-items">
+        <div class="service-item reveal" style="transition-delay:.05s">
+          <div class="service-item-icon">📋</div>
+          <div class="service-item-title">Organización de Eventos</div>
+          <div class="service-item-desc">Concéntrate en tus clientes y nosotros nos ocupamos del resto.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.1s">
+          <div class="service-item-icon">🎥</div>
+          <div class="service-item-title">Cobertura Audiovisual</div>
+          <div class="service-item-desc">¿Quieres impactar con tus eventos? Déjalo en nuestras manos.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.15s">
+          <div class="service-item-icon">🏛️</div>
+          <div class="service-item-title">Producción de Stands</div>
+          <div class="service-item-desc">¿Tienes una idea diferente para tu evento? No hay imposibles.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.2s">
+          <div class="service-item-icon">🍽️</div>
+          <div class="service-item-title">Catering</div>
+          <div class="service-item-desc">Estómago lleno, corazón contento, y cliente contento: oportunidad de venta.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.25s">
+          <div class="service-item-icon">💡</div>
+          <div class="service-item-title">Iluminación</div>
+          <div class="service-item-desc">La luz es el ingrediente mágico que dibuja un espacio. Potenciémoslo.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.3s">
+          <div class="service-item-icon">📺</div>
+          <div class="service-item-title">Pantallas LED</div>
+          <div class="service-item-desc">Dale vida y dinamismo a tu evento con tecnología LED de alta resolución.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUDIOVISUAL -->
+    <div class="service-panel panel-av" id="panel-av" role="tabpanel">
+      <div class="service-panel-header reveal">
+        <div class="service-panel-icon">🎬</div>
+        <div>
+          <div class="service-panel-title">Producción Audiovisual</div>
+          <div class="service-panel-subtitle">Crear es lo nuestro. La creatividad no tiene límites.</div>
+        </div>
+      </div>
+      <div class="service-items">
+        <div class="service-item reveal" style="transition-delay:.05s">
+          <div class="service-item-icon">✨</div>
+          <div class="service-item-title">Videomapping</div>
+          <div class="service-item-desc">La creatividad no tiene límites. Proyecciones espectaculares sobre cualquier superficie.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.1s">
+          <div class="service-item-icon">🎞️</div>
+          <div class="service-item-title">Vídeos Corporativos</div>
+          <div class="service-item-desc">Mostrar para vender, vender para mostrar. Tu historia en imágenes.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.15s">
+          <div class="service-item-icon">📷</div>
+          <div class="service-item-title">Fotografía de Productos</div>
+          <div class="service-item-desc">Una buena imagen atrae, vende y satisface. Hagamos brillar tus productos.</div>
+        </div>
+        <div class="service-item reveal" style="transition-delay:.2s">
+          <div class="service-item-icon">🎭</div>
+          <div class="service-item-title">Animaciones</div>
+          <div class="service-item-desc">Crear es lo nuestro. Motion graphics y animaciones que impactan y fidelizan.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:3rem;" class="reveal">
+      <button class="btn btn-primary" onclick="openModal()">
+        Quiero información sobre un servicio
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ── DIFFERENTIATORS ── -->
+<section id="differentiators" aria-labelledby="diff-title">
+  <div class="container">
+    <div class="diff-header reveal">
+      <span class="tag">¿Por qué elegirnos?</span>
+      <h2 class="section-title" id="diff-title">Lo que nos hace diferentes</h2>
+      <p class="section-subtitle" style="max-width:540px; margin:.75rem auto 0;">Seis pilares que sustentan cada proyecto que desarrollamos contigo.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card reveal" style="transition-delay:.1s">
+        <div class="diff-number">1</div>
+        <div class="diff-icon">💡</div>
+        <div class="diff-title">Soluciones, no excusas</div>
+        <div class="diff-desc">Con nosotros no existen los "pero" ni los "no se puede". Siempre encontramos el camino para llevar tu idea a la realidad.</div>
+      </div>
+      <div class="diff-card reveal" style="transition-delay:.2s">
+        <div class="diff-number">2</div>
+        <div class="diff-icon">🏅</div>
+        <div class="diff-title">+30 años de experiencia</div>
+        <div class="diff-desc">Un equipo con más de tres décadas en el sector aporta perspectiva, criterio y soluciones probadas que hacen la diferencia.</div>
+      </div>
+      <div class="diff-card reveal" style="transition-delay:.3s">
+        <div class="diff-number">3</div>
+        <div class="diff-icon">🔄</div>
+        <div class="diff-title">Servicio 360°</div>
+        <div class="diff-desc">Diseño, producción, eventos y audiovisual bajo un mismo techo. Sin intermediarios, sin pérdida de coherencia de marca.</div>
+      </div>
+      <div class="diff-card reveal" style="transition-delay:.4s">
+        <div class="diff-number">4</div>
+        <div class="diff-icon">⚡</div>
+        <div class="diff-title">Respuesta dinámica</div>
+        <div class="diff-desc">Somos ágiles por naturaleza. Afrontamos cada solución con velocidad y eficiencia para que no pierdas ni una sola oportunidad.</div>
+      </div>
+      <div class="diff-card reveal" style="transition-delay:.5s">
+        <div class="diff-number">5</div>
+        <div class="diff-icon">🗺️</div>
+        <div class="diff-title">Cobertura nacional</div>
+        <div class="diff-desc">Instalamos y montamos en toda España. Nuestros proyectos van donde tú vayas, sin límites geográficos.</div>
+      </div>
+      <div class="diff-card reveal" style="transition-delay:.6s">
+        <div class="diff-number">6</div>
+        <div class="diff-icon">🤝</div>
+        <div class="diff-title">Tu equipo, no tu proveedor</div>
+        <div class="diff-desc">Nos implicamos como si fuera nuestro negocio. Estaremos contigo codo a codo en cada decisión y cada entrega.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLIENTS ── -->
+<section id="clients" aria-labelledby="clients-title">
+  <div class="container">
+    <div class="clients-header reveal">
+      <span class="tag">Casos de éxito</span>
+      <h2 class="section-title" id="clients-title">Marcas que confían en Grupo Dynamic</h2>
+      <p class="section-subtitle" style="max-width:540px; margin:.75rem auto 0;">Empresas líderes de todos los sectores que han elegido nuestra forma de trabajar.</p>
+    </div>
+    <div class="clients-grid">
+      <div class="client-item reveal" style="transition-delay:.05s">Havaianas</div>
+      <div class="client-item reveal" style="transition-delay:.1s">CEU San Pablo</div>
+      <div class="client-item reveal" style="transition-delay:.15s">Maggiore</div>
+      <div class="client-item reveal" style="transition-delay:.2s">JCarrion</div>
+      <div class="client-item reveal" style="transition-delay:.25s">Wanabet</div>
+      <div class="client-item reveal" style="transition-delay:.3s">Drop Shot</div>
+      <div class="client-item reveal" style="transition-delay:.35s">Grupo R. Franco</div>
+      <div class="client-item reveal" style="transition-delay:.4s">Ayto. Madrid</div>
+      <div class="client-item reveal" style="transition-delay:.45s">Tommy Hilfiger</div>
+      <div class="client-item reveal" style="transition-delay:.5s">Payless</div>
+      <div class="client-item reveal" style="transition-delay:.55s">Aldo</div>
+      <div class="client-item reveal" style="transition-delay:.6s">Delaviuda</div>
+      <div class="client-item reveal" style="transition-delay:.65s">Padel Market</div>
+      <div class="client-item reveal" style="transition-delay:.7s">Budget</div>
+      <div class="client-item reveal" style="transition-delay:.75s">Avis</div>
+    </div>
+    <div style="text-align:center; margin-top:3rem; color:var(--gray); font-size:.9rem;" class="reveal">
+      Y muchas más empresas que han apostado por nuestra experiencia y creatividad.
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section id="process" aria-labelledby="process-title">
+  <div class="container">
+    <div class="process-header reveal">
+      <span class="tag">Cómo trabajamos</span>
+      <h2 class="section-title" id="process-title">Un proceso claro, resultados extraordinarios</h2>
+      <p class="section-subtitle" style="max-width:540px; margin:.75rem auto 0;">Cuatro pasos para convertir tu idea en realidad.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal" style="transition-delay:.1s">
+        <div class="process-step-num">1</div>
+        <div class="process-step-title">Escuchamos tu idea</div>
+        <div class="process-step-desc">Nos reunimos contigo para entender tu proyecto, objetivos y expectativas al detalle.</div>
+      </div>
+      <div class="process-step reveal" style="transition-delay:.2s">
+        <div class="process-step-num">2</div>
+        <div class="process-step-title">Diseñamos la solución</div>
+        <div class="process-step-desc">Nuestro equipo creativo elabora propuestas personalizadas orientadas a tus objetivos.</div>
+      </div>
+      <div class="process-step reveal" style="transition-delay:.3s">
+        <div class="process-step-num">3</div>
+        <div class="process-step-title">Producimos con calidad</div>
+        <div class="process-step-desc">Ejecutamos con los más altos estándares de calidad, respetando plazos y presupuesto.</div>
+      </div>
+      <div class="process-step reveal" style="transition-delay:.4s">
+        <div class="process-step-num">4</div>
+        <div class="process-step-title">Entregamos y acompañamos</div>
+        <div class="process-step-desc">Instalamos, entregamos y seguimos a tu lado para que el resultado supere tus expectativas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials" aria-labelledby="testimonials-title">
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <span class="tag">Testimonios</span>
+      <h2 class="section-title" id="testimonials-title">Lo que dicen nuestros clientes</h2>
+      <p class="section-subtitle" style="max-width:540px; margin:.75rem auto 0;">La satisfacción de quienes confían en nosotros es nuestra mejor carta de presentación.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal" style="transition-delay:.1s">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Grupo Dynamic transformó completamente la imagen de nuestra marca. Su equipo creativo entendió exactamente lo que necesitábamos y lo ejecutaron con una rapidez y calidad impecables.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div>
+            <div class="testimonial-name">María R.</div>
+            <div class="testimonial-role">Directora de Marketing · Sector Retail</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:.2s">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Para nuestros eventos corporativos son insuperables. La organización, la iluminación, los stands... todo con un nivel de detalle y profesionalidad que sorprende a propios y extraños.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JL</div>
+          <div>
+            <div class="testimonial-name">José L.</div>
+            <div class="testimonial-role">CEO · Empresa de distribución</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:.3s">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Lo más valioso es que actúan como parte de nuestro equipo. Siempre disponibles, siempre con soluciones. Con Dynamic no hay imposibles y eso, en este sector, vale oro.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AS</div>
+          <div>
+            <div class="testimonial-name">Ana S.</div>
+            <div class="testimonial-role">Brand Manager · Gran consumo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="faq-header reveal">
+      <span class="tag">Preguntas frecuentes</span>
+      <h2 class="section-title" id="faq-title">Resolvemos tus dudas</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">¿En qué zonas de España trabajáis?</span>
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Tenemos sede en Madrid, pero trabajamos en todo el territorio nacional. Realizamos instalaciones y montajes en toda España, adaptándonos a cada proyecto y ubicación.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">¿Podéis gestionar un proyecto de principio a fin?</span>
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Sí, absolutamente. Somos una agencia 360°: desde la concepción del diseño hasta la producción, instalación y entrega final. No necesitas coordinar múltiples proveedores; nosotros nos encargamos de todo.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">¿Cuál es el plazo habitual de entrega?</span>
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Los plazos varían según la complejidad del proyecto. Nuestra filosofía dinámica nos permite ser ágiles: damos respuestas rápidas y eficientes. Al contactarnos, te indicaremos el plazo exacto para tu proyecto.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">¿Trabajáis con empresas de todos los tamaños?</span>
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Sí. Desde grandes corporaciones como Tommy Hilfiger o Avis hasta pymes y marcas emergentes. Adaptamos nuestras soluciones y presupuestos a las necesidades reales de cada cliente.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">¿Cómo solicito un presupuesto?</span>
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Es muy sencillo: rellena el formulario de esta página, escríbenos por WhatsApp al 616 573 480, o envíanos un email a a.olmedo@grupodynamic.es. Te respondemos sin compromiso y con la mayor rapidez posible.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-question-text">¿Tenéis experiencia en mi sector?</span>
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Con más de 30 años de trayectoria, hemos trabajado con marcas de moda, alimentación, automoción, educación, deporte, hostelería y muchos otros sectores. Esta diversidad nos permite aportar perspectivas únicas y soluciones probadas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA FINAL ── -->
+<section id="cta" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="tag" style="background:rgba(245,166,35,.2); color:var(--gold);" class="reveal">¿Hablamos?</span>
+      <h2 class="section-title reveal" id="cta-title">Tu próximo proyecto empieza con una conversación</h2>
+      <p class="reveal">Cuéntanos tu idea. Nuestro equipo te responde en menos de 24 horas con una propuesta personalizada y sin compromiso.</p>
+      <div class="cta-actions reveal">
+        <button class="btn btn-gold" onclick="openModal()">
+          Solicitar presupuesto gratis
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="https://wa.me/34616573480?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20con%20vosotros%20sobre%20un%20proyecto" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp directo
+        </a>
+      </div>
+      <div class="cta-trust reveal">
+        <span>✓ Sin compromiso</span>
+        <span>✓ Respuesta en 24h</span>
+        <span>✓ Presupuesto personalizado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-grupo">GRUPO</div>
+        <div class="logo-dynamic">DYNAMIC</div>
+        <p class="footer-desc">Agencia especializada en soluciones y producción de marketing. Damos vida a tus ideas con más de 30 años de experiencia en el sector.</p>
+        <div class="footer-socials" aria-label="Redes sociales">
+          <a href="#" class="footer-social" aria-label="LinkedIn">in</a>
+          <a href="#" class="footer-social" aria-label="Instagram">ig</a>
+          <a href="#" class="footer-social" aria-label="Facebook">f</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <ul class="footer-links">
+          <li><a href="#services" onclick="switchTab('design')">Diseño</a></li>
+          <li><a href="#services" onclick="switchTab('production')">Producción Gráfica</a></li>
+          <li><a href="#services" onclick="switchTab('events')">Eventos</a></li>
+          <li><a href="#services" onclick="switchTab('av')">Producción Audiovisual</a></li>
+          <li><a href="#services">Merchandising</a></li>
+          <li><a href="#services">Instalación en España</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="#about">Quiénes somos</a></li>
+          <li><a href="#differentiators">Diferenciadores</a></li>
+          <li><a href="#clients">Clientes</a></li>
+          <li><a href="#process">Proceso</a></li>
+          <li><a href="#testimonials">Testimonios</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contacto</div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">📍</span>
+          <div class="footer-contact-text">C/ José Bergamin, 14<br>28030 Madrid, España</div>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">📞</span>
+          <div class="footer-contact-text">
+            <a href="tel:+34616573480">616 573 480</a><br>
+            <small>Antonio Olmedo (CEO)</small>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">✉️</span>
+          <div class="footer-contact-text">
+            <a href="mailto:a.olmedo@grupodynamic.es">a.olmedo@grupodynamic.es</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">🌐</span>
+          <div class="footer-contact-text">
+            <a href="https://www.grupodynamic.es" target="_blank" rel="noopener noreferrer">www.grupodynamic.es</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Grupo Dynamic. Todos los derechos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Aviso legal</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── CONTACT MODAL ── -->
+<div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Cerrar formulario">✕</button>
+    <div id="formContent">
+      <h2 class="modal-title" id="modal-title">Solicita tu presupuesto</h2>
+      <p class="modal-subtitle">Cuéntanos tu proyecto y te respondemos en menos de 24 horas, sin compromiso.</p>
+      <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="nombre">Nombre *</label>
+            <input class="form-input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="empresa">Empresa</label>
+            <input class="form-input" type="text" id="empresa" name="empresa" placeholder="Tu empresa" autocomplete="organization" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">Email *</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="telefono">Teléfono</label>
+            <input class="form-input" type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" autocomplete="tel" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="servicio">Servicio de interés</label>
+          <select class="form-select" id="servicio" name="servicio">
+            <option value="">Selecciona un servicio</option>
+            <option value="diseno">Diseño (corporativo, web, gráfico...)</option>
+            <option value="produccion">Producción gráfica e impresión</option>
+            <option value="eventos">Organización y producción de eventos</option>
+            <option value="audiovisual">Producción audiovisual</option>
+            <option value="merchandising">Merchandising y PPV</option>
+            <option value="otro">Otro / Varios servicios</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="mensaje">Cuéntanos tu proyecto *</label>
+          <textarea class="form-textarea" id="mensaje" name="mensaje" placeholder="Describe tu idea o proyecto..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          Enviar solicitud
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        <p class="form-note">Al enviar este formulario aceptas nuestra política de privacidad. Tus datos solo se usarán para responderte.</p>
+      </form>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <div class="form-success-icon">🎉</div>
+      <h3>¡Mensaje enviado!</h3>
+      <p style="color:var(--gray); margin-top:.5rem;">Nuestro equipo se pondrá en contacto contigo en menos de 24 horas. ¡Gracias por confiar en Grupo Dynamic!</p>
+      <button class="btn btn-primary" style="margin-top:1.5rem;" onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── WHATSAPP FLOAT ── -->
+<div class="whatsapp-float" aria-label="Contactar por WhatsApp">
+  <span class="whatsapp-bubble">¡Escríbenos ahora!</span>
+  <a href="https://wa.me/34616573480?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20vuestros%20servicios" class="whatsapp-btn-float" target="_blank" rel="noopener noreferrer" aria-label="Chat de WhatsApp con Grupo Dynamic">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script>
+  // ── NAVBAR SCROLL ──
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ── MOBILE MENU ──
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const open = menu.classList.toggle('open');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  // ── MODAL ──
+  function openModal() {
+    document.getElementById('contactModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('contactModal').classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      document.getElementById('formContent').style.display = 'block';
+      document.getElementById('formSuccess').classList.remove('show');
+      document.getElementById('contactForm').reset();
+    }, 300);
+  }
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('contactModal')) closeModal();
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // ── FORM SUBMIT ──
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    document.getElementById('formContent').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+  }
+
+  // ── TABS ──
+  function switchTab(panel) {
+    document.querySelectorAll('.service-tab').forEach((t, i) => {
+      const panels = ['design','production','events','av'];
+      t.classList.toggle('active', panels[i] === panel);
+      t.setAttribute('aria-selected', panels[i] === panel);
+    });
+    document.querySelectorAll('.service-panel').forEach(p => {
+      p.classList.toggle('active', p.id === 'panel-' + panel);
+    });
+    // scroll to services
+    document.getElementById('services').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ── FAQ ──
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // ── SCROLL REVEAL ──
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+    revealObserver.observe(el);
+  });
+</script>
+</body>
+</html>
