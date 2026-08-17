@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copa Turbo — Fútbol Arcade</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- MENU -->
+  <section id="screen-menu" class="screen">
+    <div class="stadium-lights"></div>
+    <h1 class="title">COPA <span>TURBO</span></h1>
+    <p class="subtitle">El clásico fútbol de copa... con power-ups, tiro cargado y penales a muerte súbita.</p>
+    <button class="btn btn-primary" id="btn-play">Jugar la Copa</button>
+    <button class="btn" id="btn-howto">Cómo se juega</button>
+    <div class="footer-credit">Hecho a mano. Sin licencias de equipos reales.</div>
+  </section>
+
+  <!-- HOW TO -->
+  <section id="screen-howto" class="screen hidden">
+    <h2>Controles</h2>
+    <ul class="howto-list">
+      <li><b>Flechas / WASD</b> — mover al jugador (controlás siempre al más cercano a la pelota)</li>
+      <li><b>Espacio (mantener y soltar)</b> — cargar y patear al arco</li>
+      <li><b>Shift</b> — pase rápido al compañero mejor ubicado</li>
+      <li><b>Power-ups en la cancha</b> — tocalos para activarlos: ⚡ velocidad, 🚀 tiro turbo, 🧲 imán, ❄️ congela rivales</li>
+      <li>Si el partido termina empatado, se define en <b>penales interactivos</b> (elegís dirección y potencia; también atajás los del rival)</li>
+    </ul>
+    <button class="btn btn-primary" id="btn-howto-back">Volver</button>
+  </section>
+
+  <!-- TEAM SELECT -->
+  <section id="screen-select" class="screen hidden">
+    <h2>Elegí tu equipo</h2>
+    <div id="team-cards" class="team-cards"></div>
+    <button class="btn" id="btn-select-back">Volver</button>
+  </section>
+
+  <!-- BRACKET -->
+  <section id="screen-bracket" class="screen hidden">
+    <h2>Cuadro de la Copa</h2>
+    <div id="bracket-view" class="bracket-view"></div>
+    <button class="btn btn-primary" id="btn-bracket-next">Jugar</button>
+  </section>
+
+  <!-- MATCH -->
+  <section id="screen-match" class="screen hidden">
+    <div id="hud">
+      <div class="hud-team hud-left">
+        <span class="hud-dot" id="hud-dot-left"></span>
+        <span id="hud-name-left">Local</span>
+        <span id="hud-score-left">0</span>
+      </div>
+      <div class="hud-center">
+        <span id="hud-clock">2:00</span>
+        <span id="hud-round"></span>
+      </div>
+      <div class="hud-team hud-right">
+        <span id="hud-score-right">0</span>
+        <span id="hud-name-right">Visita</span>
+        <span class="hud-dot" id="hud-dot-right"></span>
+      </div>
+    </div>
+    <div id="powerup-banner" class="hidden"></div>
+    <canvas id="pitch" width="900" height="560"></canvas>
+    <div id="goal-flash" class="hidden">¡GOOOOL!</div>
+  </section>
+
+  <!-- PENALTIES -->
+  <section id="screen-penalties" class="screen hidden">
+    <h2 id="pen-title">Definición por penales</h2>
+    <canvas id="pen-canvas" width="900" height="420"></canvas>
+    <div id="pen-info"></div>
+    <div id="pen-meter-wrap" class="hidden">
+      <div id="pen-meter"><div id="pen-meter-fill"></div><div id="pen-meter-marker"></div></div>
+      <div id="pen-hint"></div>
+    </div>
+  </section>
+
+  <!-- POST MATCH -->
+  <section id="screen-result" class="screen hidden">
+    <h2 id="result-title">Resultado</h2>
+    <p id="result-score" class="result-score"></p>
+    <p id="result-detail"></p>
+    <button class="btn btn-primary" id="btn-result-next">Continuar</button>
+  </section>
+
+  <!-- CHAMPION -->
+  <section id="screen-champion" class="screen hidden">
+    <div id="confetti"></div>
+    <h1 class="title">¡CAMPEÓN!</h1>
+    <div class="trophy">🏆</div>
+    <p id="champion-team"></p>
+    <button class="btn btn-primary" id="btn-champion-restart">Jugar de nuevo</button>
+  </section>
+
+</div>
+<script src="js/game.js"></script>
+</body>
+</html>
