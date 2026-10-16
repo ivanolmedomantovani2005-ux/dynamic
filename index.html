@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo Dynamic | Stands, retail y eventos</title>
+<meta name="description" content="Agencia de producción de marketing en Madrid. Diseñamos, producimos y montamos stands, gran formato para retail, PLV, eventos y audiovisual en toda España.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --burdeos:#6b0f12;
+  --burdeos-2:#4d0a0c;
+  --rojo:#e3262d;
+  --naranja:#f6a01a;
+  --tinta:#1d1d1f;
+  --gris:#5b5b60;
+  --gris-claro:#f2f2f2;
+  --linea:#e2e2e2;
+  --blanco:#ffffff;
+  --radio:14px;
+  --ancho:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--blanco);color:var(--tinta);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Oswald,Impact,"Arial Narrow",sans-serif;text-transform:uppercase;line-height:1.05;margin:0;letter-spacing:.01em}
+.wrap{max-width:var(--ancho);margin:0 auto;padding:0 20px}
+.eyebrow{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.85rem;color:var(--rojo);font-weight:600;margin:0 0 12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-rojo{background:var(--rojo);color:#fff}
+.btn-rojo:hover{background:#c81c23}
+.btn-linea{border:2px solid rgba(255,255,255,.7);color:#fff}
+.btn-linea:hover{background:rgba(255,255,255,.1)}
+
+/* Cabecera */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;line-height:.9}
+.logo svg{width:38px;height:38px;flex:none}
+.logo span{font-family:Oswald,sans-serif;font-weight:500;font-size:.95rem;color:var(--gris);letter-spacing:.06em}
+.logo b{display:block;font-family:Oswald,sans-serif;font-weight:700;font-size:1.3rem;color:var(--rojo);letter-spacing:.03em}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-weight:500;color:var(--gris)}
+.nav ul a:hover{color:var(--rojo)}
+.nav .btn{padding:10px 18px;font-size:.95rem}
+@media (max-width:860px){.nav ul{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:
+  linear-gradient(135deg,var(--burdeos) 0%,var(--burdeos-2) 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.13;background-image:
+  linear-gradient(60deg,#fff 25%,transparent 25.5%,transparent 75%,#fff 75.5%),
+  linear-gradient(120deg,#fff 25%,transparent 25.5%,transparent 75%,#fff 75.5%);
+  background-size:56px 97px;mask-image:linear-gradient(90deg,transparent 30%,#000 100%);-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 100%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;align-items:end;gap:24px;padding-top:72px}
+.hero-txt{padding-bottom:80px}
+.hero .eyebrow{color:var(--naranja)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem)}
+.hero h1 em{font-style:normal;color:var(--naranja)}
+.hero p.lead{font-size:1.15rem;max-width:560px;color:rgba(255,255,255,.88);margin:22px 0 32px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-dyn{align-self:end;max-width:400px;justify-self:end}
+.hero-dyn img{width:100%;height:auto}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:48px}
+  .hero-txt{padding-bottom:12px}
+  .hero-dyn{max-width:260px;justify-self:center}
+}
+
+/* Franja de datos */
+.datos{background:var(--tinta);color:#fff}
+.datos .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.dato{padding:26px 20px;border-left:1px solid rgba(255,255,255,.12)}
+.dato:first-child{border-left:0}
+.dato strong{display:block;font-family:Oswald,sans-serif;font-size:1.6rem;text-transform:uppercase;color:var(--naranja);line-height:1.1}
+.dato span{color:rgba(255,255,255,.75);font-size:.95rem}
+@media (max-width:760px){.datos .wrap{grid-template-columns:1fr}.dato{border-left:0;border-top:1px solid rgba(255,255,255,.12)}.dato:first-child{border-top:0}}
+
+section{padding:88px 0}
+.titulo{max-width:720px;margin-bottom:44px}
+.titulo h2{font-size:clamp(2rem,4vw,3rem)}
+.titulo p{color:var(--gris);font-size:1.08rem;margin:16px 0 0}
+.titulo p.eyebrow{color:var(--rojo);font-size:.85rem;margin:0 0 12px}
+
+/* Stands */
+.stands .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.stands .fotos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stands .fotos img{border-radius:var(--radio);width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.stands .fotos img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.pasos{list-style:none;padding:0;margin:28px 0 32px;counter-reset:p}
+.pasos li{counter-increment:p;display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--linea)}
+.pasos li:last-child{border-bottom:1px solid var(--linea)}
+.pasos li::before{content:counter(p,decimal-leading-zero);font-family:Oswald,sans-serif;font-size:1.4rem;color:var(--rojo);font-weight:700}
+.pasos b{display:block}
+.pasos span{color:var(--gris);font-size:.96rem}
+@media (max-width:860px){.stands .grid{grid-template-columns:1fr}}
+
+/* Servicios */
+.servicios{background:var(--gris-claro)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%;height:auto}
+.card div{padding:20px 20px 24px;border-top:5px solid var(--c)}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card ul{margin:0;padding-left:18px;color:var(--gris);font-size:.95rem}
+.card li{margin:3px 0}
+@media (max-width:1000px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+
+/* Retail */
+.retail .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.retail img{border-radius:var(--radio);aspect-ratio:16/10;object-fit:cover;width:100%;height:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{border:1px solid var(--linea);border-radius:999px;padding:6px 14px;font-size:.92rem;color:var(--gris)}
+@media (max-width:860px){.retail .grid{grid-template-columns:1fr}}
+
+/* Cómo trabajamos */
+.como{background:var(--burdeos);color:#fff}
+.como .titulo p.eyebrow{color:var(--naranja)}
+.como .titulo p{color:rgba(255,255,255,.8)}
+.valores{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.15);border-radius:var(--radio);overflow:hidden}
+.valor{background:var(--burdeos);padding:28px}
+.valor h3{font-size:1.25rem;color:#fff;margin-bottom:8px}
+.valor h3 small{color:var(--naranja);margin-right:10px;font-size:1rem}
+.valor p{margin:0;color:rgba(255,255,255,.8);font-size:.96rem}
+@media (max-width:860px){.valores{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.valores{grid-template-columns:1fr}}
+
+/* Clientes */
+.logos{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--linea);border-left:1px solid var(--linea)}
+.logos li{list-style:none;border-right:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:28px 12px;text-align:center;font-family:Oswald,sans-serif;font-weight:600;font-size:1.15rem;color:#8a8a8f;text-transform:uppercase;letter-spacing:.04em}
+.logos{padding:0;margin:0}
+@media (max-width:860px){.logos{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.logos{grid-template-columns:repeat(2,1fr)}.logos li{font-size:1rem;padding:20px 8px}}
+
+/* Contacto */
+.contacto{background:var(--tinta);color:#fff}
+.contacto .titulo p{color:rgba(255,255,255,.75)}
+.contacto .titulo p.eyebrow{color:var(--naranja)}
+.personas{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:28px}
+.persona{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radio);padding:26px}
+.persona h3{font-size:1.4rem}
+.persona .cargo{color:var(--naranja);font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.9rem;margin:4px 0 16px}
+.persona a{display:flex;gap:10px;align-items:center;text-decoration:none;color:rgba(255,255,255,.9);padding:6px 0;word-break:break-all}
+.persona a:hover{color:#fff;text-decoration:underline}
+.persona svg{width:18px;height:18px;flex:none;color:var(--rojo)}
+.direccion{color:rgba(255,255,255,.75)}
+@media (max-width:760px){.personas{grid-template-columns:1fr}}
+
+footer{background:#111;color:rgba(255,255,255,.55);font-size:.9rem;padding:24px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+footer a{color:rgba(255,255,255,.75)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#inicio" aria-label="Grupo Dynamic, inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 12 14 6l10 6-10 6z" fill="#c9c9cc"/><path d="M4 12v12l10 6V18z" fill="#9a9a9f"/><path d="M14 18v12l10-6V12z" fill="#e3262d"/><path d="m24 12 12-6v12l-12 6z" fill="#b51c22"/></svg>
+      <div><span>GRUPO</span><b>DYNAMIC</b></div>
+    </a>
+    <ul>
+      <li><a href="#stands">Stands</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-rojo" href="#contacto">Pide presupuesto</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div class="hero-txt">
+      <p class="eyebrow">Agencia de soluciones y producción de marketing · Madrid</p>
+      <h1>Damos vida a tus ideas.<br>De la idea <em>al montaje</em>.</h1>
+      <p class="lead">Diseñamos, producimos y montamos stands, gran formato para retail, PLV y eventos. Un solo equipo creativo y de producción, con instalación en toda España.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-rojo" href="#contacto">Cuéntanos tu proyecto</a>
+        <a class="btn btn-linea" href="#stands">Ver cómo trabajamos los stands</a>
+      </div>
+    </div>
+    <div class="hero-dyn">
+      <img src="assets/img/dyn.webp" width="556" height="608" alt="Dyn, la mascota de Grupo Dynamic, dando la bienvenida">
+    </div>
+  </div>
+</section>
+
+<div class="datos">
+  <div class="wrap">
+    <div class="dato"><strong>+30 años</strong><span>de experiencia de nuestro equipo en el sector</span></div>
+    <div class="dato"><strong>Toda España</strong><span>instalación y montaje donde lo necesites</span></div>
+    <div class="dato"><strong>Todo en casa</strong><span>diseño, producción, eventos y audiovisual</span></div>
+  </div>
+</div>
+
+<section class="stands" id="stands">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Stands para ferias y eventos</p>
+      <h2 style="font-size:clamp(2rem,4vw,3rem)">¿Tienes una feria? Verás tu stand en 3D antes de producirlo.</h2>
+      <p style="color:var(--gris);font-size:1.08rem;margin:16px 0 0">Nos encargamos de todo el proceso para que tú te concentres en tus clientes.</p>
+      <ol class="pasos">
+        <li><div><b>Diseño 3D</b><span>Te enseñamos cómo será tu stand antes de fabricar nada.</span></div></li>
+        <li><div><b>Producción</b><span>Estructura, gráfica, impresión y mobiliario con nuestro equipo y partners.</span></div></li>
+        <li><div><b>Montaje en toda España</b><span>Llevamos, montamos y desmontamos el stand en el recinto.</span></div></li>
+        <li><div><b>Iluminación, LED y audiovisual</b><span>Pantallas, luz y contenidos para que tu stand destaque.</span></div></li>
+      </ol>
+      <a class="btn btn-rojo" href="#contacto">Pide presupuesto para tu stand</a>
+    </div>
+    <div class="fotos">
+      <img src="assets/img/stand-feria.webp" width="669" height="359" alt="Stand en feria con visitantes" loading="lazy">
+      <img src="assets/img/stand-r-franco.webp" width="541" height="539" alt="Diseño 3D de stand para Grupo R. Franco" loading="lazy">
+      <img src="assets/img/stand-render.webp" width="414" height="312" alt="Render de stand modular" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="servicios" id="servicios">
+  <div class="wrap">
+    <div class="titulo">
+      <p class="eyebrow">Qué hacemos</p>
+      <h2>Todo lo que tu marketing necesita, con un solo equipo</h2>
+      <p>Te asesoramos en los materiales que más te convienen y los hacemos realidad, desde la idea hasta la entrega.</p>
+    </div>
+    <div class="cards">
+      <article class="card" style="--c:#e3262d">
+        <img src="assets/img/diseno.webp" width="561" height="368" alt="Diseño gráfico y revisión de materiales impresos" loading="lazy">
+        <div><h3>Diseño</h3><ul><li>Identidad corporativa y naming</li><li>Brandbooks y papelería</li><li>Diseño gráfico, catálogos y folletos</li><li>Web</li><li>Diseño 3D de stands</li></ul></div>
+      </article>
+      <article class="card" style="--c:#2a9d4b">
+        <img src="assets/img/impresion.webp" width="391" height="295" alt="Impresión digital de gran formato" loading="lazy">
+        <div><h3>Producción gráfica y digital</h3><ul><li>Gran formato para retail</li><li>PLV y promoción en punto de venta</li><li>Impresión offset y digital</li><li>Impresión 3D y cartelería</li><li>Merchandising</li></ul></div>
+      </article>
+      <article class="card" style="--c:#f6a01a">
+        <img src="assets/img/eventos.webp" width="575" height="368" alt="Evento con escenografía e iluminación" loading="lazy">
+        <div><h3>Eventos</h3><ul><li>Organización de eventos</li><li>Producción de stands</li><li>Iluminación y pantallas LED</li><li>Cobertura audiovisual</li><li>Catering</li></ul></div>
+      </article>
+      <article class="card" style="--c:#1aa3d9">
+        <img src="assets/img/audiovisual.webp" width="608" height="317" alt="Plató de fotografía y vídeo" loading="lazy">
+        <div><h3>Audiovisual</h3><ul><li>Vídeos corporativos</li><li>Fotografía de producto</li><li>Videomapping</li><li>Animaciones</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="retail">
+  <div class="wrap grid">
+    <img src="assets/img/retail.webp" width="605" height="344" alt="Tienda con gráfica y PLV en punto de venta" loading="lazy">
+    <div>
+      <p class="eyebrow">Retail y punto de venta</p>
+      <h2 style="font-size:clamp(2rem,4vw,3rem)">Tiendas que venden más</h2>
+      <p style="color:var(--gris);font-size:1.08rem;margin:16px 0 0">Producimos e instalamos la gráfica de tus tiendas y campañas: escaparates, vinilos, PLV y material promocional, en una tienda o en toda tu red.</p>
+      <div class="chips"><span>Escaparates</span><span>Gran formato</span><span>PLV</span><span>Vinilos</span><span>Merchandising</span><span>Instalación</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="como">
+  <div class="wrap">
+    <div class="titulo">
+      <p class="eyebrow">Cómo lo hacemos</p>
+      <h2>Contigo, codo a codo, en cada paso</h2>
+      <p>Somos un equipo dedicado a darte soluciones en tu área de marketing.</p>
+    </div>
+    <div class="valores">
+      <div class="valor"><h3><small>01</small>Compromiso</h3><p>Nos comprometemos al 100% con darle vida a tus ideas.</p></div>
+      <div class="valor"><h3><small>02</small>Compañerismo</h3><p>Somos un equipo y estaremos contigo en cada momento.</p></div>
+      <div class="valor"><h3><small>03</small>Dynamismo</h3><p>Respuestas rápidas y eficientes que potencian tu negocio.</p></div>
+      <div class="valor"><h3><small>04</small>Soluciones</h3><p>No existen los "pero" ni los "no se puede": buscamos la solución siempre.</p></div>
+      <div class="valor"><h3><small>05</small>Confianza</h3><p>Cuando surja una idea, tendrás un equipo a tu disposición para llevarla a cabo.</p></div>
+      <div class="valor"><h3><small>06</small>Experiencia</h3><p>Un equipo con más de 30 años en el sector y partners que hacen que todo sea posible.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="clientes">
+  <div class="wrap">
+    <div class="titulo">
+      <p class="eyebrow">Confían en nosotros</p>
+      <h2>Marcas que ya han trabajado con nosotros</h2>
+    </div>
+    <ul class="logos">
+      <li>Havaianas</li><li>Tommy Hilfiger</li><li>ALDO</li><li>Avis</li><li>Budget</li>
+      <li>Payless</li><li>Delaviuda</li><li>CEU San Pablo</li><li>Ayto. de Madrid</li><li>Grupo R. Franco</li>
+      <li>JCarrion</li><li>Maggiore</li><li>Drop Shot</li><li>Wanabet</li><li>Padel Market</li>
+    </ul>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="wrap">
+    <div class="titulo">
+      <p class="eyebrow">Nos gustaría conocerte</p>
+      <h2>Cuéntanos tu próximo stand, tienda o evento</h2>
+      <p>Llámanos o escríbenos y te preparamos una propuesta.</p>
+    </div>
+    <div class="personas">
+      <div class="persona">
+        <h3>Antonio Olmedo</h3>
+        <p class="cargo">CEO</p>
+        <a href="tel:+34616573480"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>616 573 480</a>
+        <a href="mailto:a.olmedo@grupodynamic.es"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>a.olmedo@grupodynamic.es</a>
+      </div>
+      <div class="persona">
+        <h3>Roman Garcia</h3>
+        <p class="cargo">Director creativo</p>
+        <a href="tel:+34608268975"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>608 268 975</a>
+        <a href="mailto:creativo@grupodynamic.es"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>creativo@grupodynamic.es</a>
+      </div>
+    </div>
+    <p class="direccion">C/ José Bergamín, 14 · 28030 Madrid · <a href="https://www.grupodynamic.es" style="color:#fff">www.grupodynamic.es</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Grupo Dynamic · Agencia especializada en soluciones y producción de marketing</span>
+    <span>C/ José Bergamín, 14 · 28030 Madrid</span>
+  </div>
+</footer>
+
+</body>
+</html>
