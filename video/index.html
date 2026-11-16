@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --burdeos: #6b0f12;
+        --burdeos-2: #3a0608;
+        --rojo: #ff5a5f;
+        --naranja: #ffc14d;
+        --blanco: #ffffff;
+        --font-display: Arial, Helvetica, sans-serif;
+        --font-body: Arial, Helvetica, sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--burdeos-2);
+      }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        font-family: var(--font-body);
+        color: var(--blanco);
+      }
+      .clip { position: absolute; inset: 0; overflow: hidden; }
+      .bg {
+        position: absolute; inset: 0;
+        width: 100%; height: 100%;
+        object-fit: cover;
+        transform-origin: 50% 50%;
+      }
+      .shade {
+        position: absolute; inset: 0;
+        background: linear-gradient(180deg, rgba(58,6,8,.55) 0%, rgba(58,6,8,.72) 55%, rgba(30,3,4,.94) 100%);
+      }
+      .copy {
+        position: absolute;
+        left: 90px; right: 90px; top: 0; bottom: 0;
+        display: flex; flex-direction: column; justify-content: center;
+      }
+      .copy.top {
+        justify-content: flex-start;
+        padding-top: 330px;
+      }
+      .eyebrow {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 40px;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: var(--naranja);
+        margin-bottom: 28px;
+      }
+      .headline {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 140px;
+        line-height: .98;
+        text-transform: uppercase;
+        letter-spacing: -.01em;
+      }
+      .headline .w { display: inline-block; margin-right: .18em; }
+      .accent { color: var(--naranja); }
+      .sub {
+        margin-top: 40px;
+        font-size: 48px;
+        line-height: 1.35;
+        color: rgba(255,255,255,.95);
+        max-width: 880px;
+      }
+      .chips { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 48px; }
+      .chip {
+        border: 3px solid rgba(255,255,255,.75);
+        border-radius: 999px;
+        padding: 14px 28px;
+        font-size: 38px;
+        color: #fff;
+        background: rgba(0,0,0,.2);
+      }
+      .stat {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 330px;
+        line-height: .9;
+        color: var(--naranja);
+      }
+      .stat-label {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 66px;
+        text-transform: uppercase;
+        margin-top: 24px;
+        line-height: 1.05;
+      }
+      .inset {
+        position: absolute;
+        left: 90px; right: 90px; bottom: 260px;
+        height: 430px;
+        width: calc(100% - 180px);
+        border-radius: 28px;
+        object-fit: cover;
+        box-shadow: 0 30px 80px rgba(0,0,0,.45);
+      }
+      .brand {
+        position: absolute;
+        left: 90px; top: 220px;
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 44px;
+        letter-spacing: .04em;
+        color: #fff;
+      }
+      .brand b { color: var(--rojo); }
+      .cta-btn {
+        display: inline-block;
+        margin-top: 56px;
+        background: var(--rojo);
+        color: #fff;
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 58px;
+        text-transform: uppercase;
+        padding: 28px 52px;
+        border-radius: 999px;
+        align-self: flex-start;
+      }
+      .foot {
+        position: absolute;
+        left: 90px; right: 90px; bottom: 150px;
+        font-size: 36px;
+        color: rgba(255,255,255,.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="30"
+      data-width="1080"
+      data-height="1920"
+    >
+      <!-- Escena 1: gancho (0–5 s) -->
+      <section id="s1" class="clip" data-start="0" data-duration="5" data-track-index="0">
+        <img class="bg" src="assets/img/bg-stand.png" alt="" />
+        <div class="shade"></div>
+        <div class="brand">GRUPO <b>DYNAMIC</b></div>
+        <div class="copy">
+          <div class="eyebrow">Agencia de producción · Madrid</div>
+          <div class="headline">
+            <span class="w">Damos</span><span class="w">vida</span><br />
+            <span class="w accent">a tus</span><span class="w">ideas.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Escena 2: el proceso (5–10 s) -->
+      <section id="s2" class="clip" data-start="5" data-duration="5" data-track-index="0">
+        <img class="bg" src="assets/img/bg-retail.png" alt="" />
+        <div class="shade"></div>
+        <div class="copy">
+          <div class="eyebrow">Cómo trabajamos</div>
+          <div class="headline" style="font-size:124px">
+            <span class="w">Diseñamos.</span><br />
+            <span class="w accent">Producimos.</span><br />
+            <span class="w">Montamos.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Escena 3: qué hacemos (10–15 s) -->
+      <section id="s3" class="clip" data-start="10" data-duration="5" data-track-index="0">
+        <img class="bg" src="assets/img/bg-stand.png" alt="" />
+        <div class="shade"></div>
+        <div class="copy top">
+          <div class="eyebrow">Lo que hacemos</div>
+          <div class="headline" style="font-size:124px">
+            <span class="w">Stands,</span><br />
+            <span class="w accent">retail</span><span class="w">y eventos.</span>
+          </div>
+          <div class="chips">
+            <span class="chip">Stands</span>
+            <span class="chip">PLV</span>
+            <span class="chip">Gran formato</span>
+            <span class="chip">Audiovisual</span>
+          </div>
+        </div>
+        <img class="inset" src="assets/img/eventos.webp" alt="" />
+      </section>
+
+      <!-- Escena 4: experiencia (15–20 s) -->
+      <section id="s4" class="clip" data-start="15" data-duration="5" data-track-index="0">
+        <img class="bg" src="assets/img/bg-retail.png" alt="" />
+        <div class="shade"></div>
+        <div class="copy">
+          <div class="stat" id="stat">+30</div>
+          <div class="stat-label">años de experiencia<br />en el sector</div>
+          <div class="sub">Un solo equipo creativo y de producción, de la idea al montaje.</div>
+        </div>
+      </section>
+
+      <!-- Escena 5: cobertura (20–25 s) -->
+      <section id="s5" class="clip" data-start="20" data-duration="5" data-track-index="0">
+        <img class="bg" src="assets/img/bg-stand.png" alt="" />
+        <div class="shade"></div>
+        <div class="copy top">
+          <div class="eyebrow">Toda España</div>
+          <div class="headline" style="font-size:118px">
+            <span class="w">Instalación</span><br />
+            <span class="w accent">donde</span><span class="w">lo necesites.</span>
+          </div>
+          <div class="sub">Diseño, producción, eventos y audiovisual, todo en casa.</div>
+        </div>
+        <img class="inset" src="assets/img/retail.webp" alt="" />
+      </section>
+
+      <!-- Escena 6: cierre (25–30 s) -->
+      <section id="s6" class="clip" data-start="25" data-duration="5" data-track-index="0">
+        <img class="bg" src="assets/img/bg-retail.png" alt="" />
+        <div class="shade"></div>
+        <div class="copy">
+          <div class="brand" style="position:static;margin-bottom:40px">GRUPO <b>DYNAMIC</b></div>
+          <div class="headline" style="font-size:132px">
+            <span class="w">Cuéntanos</span><br />
+            <span class="w accent">tu proyecto.</span>
+          </div>
+          <div class="cta-btn">Pide presupuesto</div>
+        </div>
+        <div class="foot">Diseñamos, producimos y montamos stands, gran formato para retail, PLV y eventos.</div>
+      </section>
+
+      <!-- Efectos de sonido: whoosh en cada corte, impacto en los titulares -->
+      <audio id="sfx-impact-1" src=".media/audio/sfx/sfx_002.mp3" data-start="0.2" data-duration="2.6" data-volume="0.8"></audio>
+      <audio id="sfx-whoosh-2" src=".media/audio/sfx/sfx_001.mp3" data-start="4.2" data-duration="5.5" data-volume="0.5"></audio>
+      <audio id="sfx-impact-2" src=".media/audio/sfx/sfx_002.mp3" data-start="10.2" data-duration="2.6" data-volume="0.8"></audio>
+      <audio id="sfx-whoosh-3" src=".media/audio/sfx/sfx_001.mp3" data-start="19.2" data-duration="5.5" data-volume="0.5"></audio>
+      <audio id="sfx-impact-3" src=".media/audio/sfx/sfx_002.mp3" data-start="25.2" data-duration="2.6" data-volume="0.8"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Movimiento lento de cámara en cada fondo (evita tramos estáticos)
+      tl.fromTo("#s1 .bg", { scale: 1.0 }, { scale: 1.08, duration: 5, ease: "none" }, 0);
+      tl.fromTo("#s2 .bg", { scale: 1.0 }, { scale: 1.08, duration: 5, ease: "none" }, 5);
+      tl.fromTo("#s3 .bg", { scale: 1.0 }, { scale: 1.08, duration: 5, ease: "none" }, 10);
+      tl.fromTo("#s4 .bg", { scale: 1.0 }, { scale: 1.08, duration: 5, ease: "none" }, 15);
+      tl.fromTo("#s5 .bg", { scale: 1.0 }, { scale: 1.08, duration: 5, ease: "none" }, 20);
+      tl.fromTo("#s6 .bg", { scale: 1.0 }, { scale: 1.08, duration: 5, ease: "none" }, 25);
+
+      // Escena 1: palabras que entran en secuencia
+      tl.from("#s1 .eyebrow", { opacity: 0, y: 30, duration: 0.4, ease: "power3.out" }, 0.1);
+      tl.from("#s1 .headline .w", { opacity: 0, y: 90, duration: 0.45, ease: "power4.out", stagger: 0.12 }, 0.3);
+      tl.from("#s1 .brand", { opacity: 0, y: -20, duration: 0.4, ease: "power3.out" }, 0.4);
+
+      // Escena 2: tres verbos, uno tras otro
+      tl.from("#s2 .eyebrow", { opacity: 0, y: 30, duration: 0.4, ease: "power3.out" }, 5.1);
+      tl.from("#s2 .headline .w", { opacity: 0, x: -120, duration: 0.45, ease: "power4.out", stagger: 0.35 }, 5.3);
+
+      // Escena 3: titular, chips y foto
+      tl.from("#s3 .eyebrow", { opacity: 0, y: 30, duration: 0.4, ease: "power3.out" }, 10.1);
+      tl.from("#s3 .headline .w", { opacity: 0, y: 90, duration: 0.45, ease: "power4.out", stagger: 0.15 }, 10.3);
+      tl.from("#s3 .chip", { opacity: 0, scale: 0.8, duration: 0.35, ease: "back.out(1.6)", stagger: 0.1 }, 10.8);
+      tl.from("#s3 .inset", { opacity: 0, y: 60, duration: 0.6, ease: "power3.out" }, 10.6);
+
+      // Escena 4: cifra que sube
+      tl.from("#stat", { opacity: 0, scale: 0.7, duration: 0.8, ease: "back.out(1.4)" }, 15.2);
+      tl.from("#s4 .stat-label, #s4 .sub", { opacity: 0, y: 40, duration: 0.5, ease: "power3.out", stagger: 0.15 }, 15.8);
+
+      // Escena 5: cobertura geográfica
+      tl.from("#s5 .eyebrow", { opacity: 0, y: 30, duration: 0.4, ease: "power3.out" }, 20.1);
+      tl.from("#s5 .headline .w", { opacity: 0, y: 90, duration: 0.45, ease: "power4.out", stagger: 0.14 }, 20.3);
+      tl.from("#s5 .inset", { opacity: 0, y: 60, duration: 0.6, ease: "power3.out" }, 20.6);
+
+      // Escena 6: cierre y llamada a la acción
+      tl.from("#s6 .brand", { opacity: 0, y: 30, duration: 0.4, ease: "power3.out" }, 25.1);
+      tl.from("#s6 .headline .w", { opacity: 0, y: 90, duration: 0.45, ease: "power4.out", stagger: 0.18 }, 25.3);
+      tl.from("#s6 .cta-btn", { opacity: 0, scale: 0.85, duration: 0.5, ease: "back.out(1.7)" }, 26.0);
+      tl.from("#s6 .foot", { opacity: 0, duration: 0.5, ease: "power2.out" }, 26.4);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
