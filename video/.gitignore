@@ -1,2 +1,3 @@
-video/out/
-video/music.wav
+out/
+music.wav
+render.log
