@@ -24,6 +24,12 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#000}
 .vg{position:absolute;left:1180px;top:330px;width:620px;height:520px;overflow:visible}
 .chip{border:2px solid rgba(255,255,255,.28);border-radius:999px;padding:16px 30px;font-size:30px;font-weight:600;white-space:nowrap}
 .chip.hot{background:#e3262d;border-color:#e3262d}
+/* Tratamiento cinematográfico: color unificado sobre las fotos */
+.ph img{filter:grayscale(.45) contrast(1.12) brightness(.92)}
+.ph::after{content:"";position:absolute;inset:0;background:#6b0f12;mix-blend-mode:multiply;opacity:.35;pointer-events:none}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%);z-index:45;pointer-events:none}
+#grain{position:absolute;inset:-512px;background:url(grain.png);opacity:.09;z-index:46;pointer-events:none;mix-blend-mode:overlay}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:51;pointer-events:none}
 </style>
 </head>
 <body>
@@ -178,6 +184,9 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#000}
 </section>
 
 <div id="wipe"></div>
+<div id="flash"></div>
+<div id="vig"></div>
+<div id="grain"></div>
 <div id="fade"></div>
 </div>
 
@@ -215,12 +224,20 @@ function f1(l){
   p=E(P(l,6,.8)); set($('s1s'),{opacity:p,transform:`translateY(${(1-p)*30}px)`});
 }
 
+// Movimiento de cámara lento sobre una foto: empuje de zoom y deriva
+function cam(el,l,z0,z1,dx,dy){
+  const im=el.querySelector('img');
+  if(!im) return;
+  const k=E(P(l,0,8));
+  im.style.transform=`scale(${z0+(z1-z0)*k}) translate(${dx*k}px,${dy*k}px)`;
+}
 function f2(l){
   $('s2e').style.opacity=P(l,.1,.5);
   wordsAnim('s2h',l,.4,.12,.5);
   let p=E(P(l,.8,1)); $('s2p1').style.clipPath=`inset(${(1-p)*100}% 0 0 0)`;
   p=E(P(l,1.6,.9)); $('s2p2').style.clipPath=`inset(0 ${(1-p)*100}% 0 0)`;
   p=E(P(l,2.2,.9)); $('s2p3').style.clipPath=`inset(0 0 ${(1-p)*100}% 0)`;
+  cam($('s2p1'),l,1.12,1.02,-30,0); cam($('s2p2'),l,1.1,1.0,0,-20); cam($('s2p3'),l,1.08,1.0,20,0);
   $('s2n').textContent=Math.round(30*E(P(l,2.5,1.6)));
   $('s2l').style.opacity=P(l,2.5,.8);
 }
@@ -290,6 +307,7 @@ function f6(l){
   let p=E(P(l,.2,1)); $('s6p1').style.clipPath=`inset(0 0 ${(1-p)*100}% 0)`; $('s6p1').style.transform=`translateY(${-l*5}px)`;
   p=E(P(l,.6,1)); $('s6p2').style.clipPath=`inset(0 ${(1-p)*100}% 0 0)`; $('s6p2').style.transform=`translateY(${l*4}px)`;
   p=E(P(l,1.0,1)); $('s6p3').style.clipPath=`inset(0 0 0 ${(1-p)*100}%)`; $('s6p3').style.transform=`translateY(${-l*3}px)`;
+  cam($('s6p1'),l,1.1,1.0,-25,0); cam($('s6p2'),l,1.1,1.0,20,0); cam($('s6p3'),l,1.12,1.0,0,-15);
   $('s6c').style.opacity=P(l,6,.8);
 }
 
@@ -324,6 +342,12 @@ function renderAt(ms){
   const w=$('wipe');
   if(wq===null) w.style.display='none';
   else {w.style.display='block';w.style.transform=`translateX(${-100+200*wq}%)`;}
+  // Destello blanco breve en cada corte
+  let fl=0; for(const b of B){const d=Math.abs(t-b); if(d<.12) fl=Math.max(fl,(1-d/.12)*.45);}
+  $('flash').style.opacity=fl;
+  // Grano animado: desplazamiento por fotograma
+  const f=Math.round(t*30);
+  $('grain').style.transform=`translate(${(f*37)%512}px,${(f*61)%512}px)`;
 }
 window.renderAt=renderAt;
 renderAt(0);

@@ -26,6 +26,18 @@ def hat(t):
     if t > 0.06: return 0.0
     return 0.18 * (random.random() * 2 - 1) * math.exp(-t * 80)
 
+def snare(t):
+    if t > 0.25: return 0.0
+    return 0.22 * (random.random() * 2 - 1) * math.exp(-t * 18) + 0.12 * math.sin(2 * math.pi * 190 * t) * math.exp(-t * 25)
+
+def crash(t):
+    if t > 2.2: return 0.0
+    return 0.16 * (random.random() * 2 - 1) * math.exp(-t * 1.6)
+
+def hit(t):
+    if t > 0.5: return 0.0
+    return 0.35 * math.sin(2 * math.pi * (110 - 40 * t) * t) * math.exp(-t * 9)
+
 def boom(t):
     if t > 1.6: return 0.0
     return 0.7 * math.sin(2 * math.pi * (38 + 20 * math.exp(-t * 4)) * t) * math.exp(-t * 2.5)
@@ -71,7 +83,9 @@ t = 9.5
 while t < 75.5:
     add(t, 0.4, kick)
     if t >= 17.5 and beat % 2 == 1:
-        add(t, 0.1, boom if False else hat)
+        add(t, 0.1, hat)
+    if t >= 17.5 and beat % 4 == 2:
+        add(t, 0.25, snare)
     if t >= 27.5:
         # corcheas de bajo, raíz del acorde actual
         for k in range(2):
@@ -86,6 +100,14 @@ while t < 75.5:
 for b in [9.5, 17.5, 27.5, 43.5, 57.0, 66.0]:
     add(b, 1.6, boom)
     add(b - 0.6, 0.6, lambda u: riser(u, 0.6))  # pequeño barrido de entrada
+
+for k in range(5):
+    add(27.5 + k * 3.2, 2.2, crash)
+    add(27.5 + k * 3.2, 0.5, hit)
+# Empuje final: platillo y subgrave en el cierre
+add(66.0, 2.5, crash)
+add(74.0, 3.0, crash)
+add(74.0, 1.5, boom)
 
 # Brillo final y fundido de salida
 peak = max(abs(x) for x in buf) or 1.0
