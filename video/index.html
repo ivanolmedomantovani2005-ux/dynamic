@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Grupo Dynamic · Vídeo corporativo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#000}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;font-family:Inter,"Inter Display",system-ui,sans-serif;color:#fff}
+.scene{position:absolute;inset:0;display:none;overflow:hidden}
+.a{position:absolute;white-space:nowrap}
+.H{font-weight:900;text-transform:uppercase;letter-spacing:-.025em;line-height:.9}
+.eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:26px}
+.grid{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:120px 120px}
+.w{display:inline-block;margin-right:.22em}
+.ph{position:absolute;overflow:hidden;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+#wipe{position:absolute;inset:0;background:#e3262d;transform:translateX(-100%);display:none;z-index:50}
+#fade{position:absolute;inset:0;background:#000;opacity:0;z-index:60;pointer-events:none}
+.vb{position:absolute;inset:0;display:none}
+.vn{position:absolute;left:110px;top:190px;font-size:150px}
+.vnum{position:absolute;left:120px;top:130px;color:#f6a01a}
+.vs{position:absolute;left:120px;top:420px;width:860px;font-size:50px;font-weight:500;line-height:1.25;color:rgba(255,255,255,.92);white-space:normal}
+.vg{position:absolute;left:1180px;top:330px;width:620px;height:520px;overflow:visible}
+.chip{border:2px solid rgba(255,255,255,.28);border-radius:999px;padding:16px 30px;font-size:30px;font-weight:600;white-space:nowrap}
+.chip.hot{background:#e3262d;border-color:#e3262d}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<!-- ESCENA 1 · INTRO: LAS IDEAS -->
+<section class="scene grid" id="s1" style="background:radial-gradient(circle at 72% 38%,#8a1418 0%,#6b0f12 38%,#2a0506 100%)">
+  <div class="a eyebrow" id="s1e" style="left:120px;top:150px;color:#f6a01a;opacity:0">Grupo Dynamic · Marketing</div>
+  <div class="a H" id="s1a" style="left:112px;top:235px;font-size:150px;opacity:0">Todo empieza</div>
+  <div class="a H" id="s1b" style="left:112px;top:370px;font-size:150px;color:#f6a01a;clip-path:inset(0 100% 0 0)">con una idea.</div>
+  <div class="a" id="s1l" style="left:120px;top:560px;width:900px;height:6px;background:#e3262d;transform-origin:left center;transform:scaleX(0)"></div>
+  <div class="a" id="s1s" style="left:120px;top:610px;font-size:50px;font-weight:500;color:rgba(255,255,255,.92);opacity:0">Presentamos a Grupo Dynamic: el equipo que las transforma en realidad.</div>
+  <img class="a" id="s1m" src="../assets/img/dyn.webp" alt="" style="left:1370px;top:250px;width:430px;transform-origin:50% 100%;transform:scale(0);opacity:0">
+</section>
+
+<!-- ESCENA 2 · QUIÉNES SOMOS -->
+<section class="scene" id="s2" style="background:#f5f5f6;color:#1d1d1f">
+  <div class="a eyebrow" id="s2e" style="left:120px;top:150px;color:#e3262d;opacity:0">Quiénes somos</div>
+  <div class="a H" id="s2h" data-split style="left:120px;top:215px;width:880px;white-space:normal;font-size:100px">Somos el equipo que da vida a tus ideas.</div>
+  <div class="a H" id="s2n-wrap" style="left:120px;top:690px;font-size:200px;color:#e3262d">+<span id="s2n">0</span></div>
+  <div class="a" id="s2l" style="left:120px;top:900px;font-size:32px;color:#5b5b60;opacity:0">años de experiencia de nuestro equipo en el sector</div>
+  <div class="ph" id="s2p1" style="left:1040px;top:150px;width:760px;height:430px;clip-path:inset(100% 0 0 0)"><img src="../assets/img/stand-feria.webp" alt=""></div>
+  <div class="ph" id="s2p2" style="left:1400px;top:520px;width:400px;height:280px;clip-path:inset(0 100% 0 0)"><img src="../assets/img/eventos.webp" alt=""></div>
+  <div class="ph" id="s2p3" style="left:1040px;top:640px;width:330px;height:240px;clip-path:inset(0 0 100% 0)"><img src="../assets/img/diseno.webp" alt=""></div>
+</section>
+
+<!-- ESCENA 3 · QUÉ HACEMOS -->
+<section class="scene grid" id="s3" style="background:#121013">
+  <div class="a" id="s3r" style="left:0;top:300px;width:1920px;text-align:center;font-size:150px;font-weight:900;text-transform:uppercase;letter-spacing:-.025em;line-height:1">
+    <span id="s3A" style="display:inline-block;opacity:0">Analógico</span>
+    <span id="s3p" style="display:inline-block;color:#f6a01a;transform:scale(0);margin:0 .15em">+</span>
+    <span id="s3D" style="display:inline-block;opacity:0;color:#e3262d">Digital</span>
+  </div>
+  <div class="a" id="s3m" style="left:260px;top:520px;width:1400px;white-space:normal;text-align:center;font-size:62px;font-weight:600;line-height:1.25;opacity:0">Unimos estrategia, creatividad y ejecución para impulsar tu marca.</div>
+  <div class="a" style="left:210px;top:690px;width:1500px;display:flex;flex-wrap:wrap;justify-content:center;gap:22px">
+    <span class="chip hot" style="opacity:0">Diseño y creatividad</span>
+    <span class="chip" style="opacity:0">Publicidad y comunicación</span>
+    <span class="chip" style="opacity:0">Marketing y estrategia digital</span>
+    <span class="chip" style="opacity:0">SEO y SEM</span>
+    <span class="chip" style="opacity:0">Gestión de redes sociales</span>
+    <span class="chip" style="opacity:0">Producción audiovisual</span>
+    <span class="chip" style="opacity:0">Organización de eventos</span>
+    <span class="chip" style="opacity:0">Soluciones offline y online</span>
+  </div>
+</section>
+
+<!-- ESCENA 4 · VALORES -->
+<section class="scene grid" id="s4" style="background:linear-gradient(135deg,#6b0f12,#3f0708)">
+  <div class="a eyebrow" style="left:120px;top:60px;color:rgba(255,255,255,.55);font-size:22px">Nuestros valores</div>
+
+  <div class="vb" id="v0">
+    <div class="vnum eyebrow" style="font-size:34px">01 / 05</div>
+    <div class="vn H vnm">Compromiso</div>
+    <div class="vs vsx">Nos comprometemos al 100 % con darle vida a tus ideas.</div>
+    <svg class="vg" viewBox="0 0 620 520">
+      <circle cx="310" cy="260" r="200" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="26"/>
+      <circle id="c1" cx="310" cy="260" r="200" fill="none" stroke="#f6a01a" stroke-width="26" stroke-linecap="round" stroke-dasharray="1256.6" stroke-dashoffset="1256.6" transform="rotate(-90 310 260)"/>
+      <text id="t1" x="310" y="290" text-anchor="middle" font-family="Inter" font-weight="900" font-size="110" fill="#fff">0%</text>
+    </svg>
+  </div>
+
+  <div class="vb" id="v1">
+    <div class="vnum eyebrow" style="font-size:34px">02 / 05</div>
+    <div class="vn H vnm">Compañerismo</div>
+    <div class="vs vsx">Trabajamos codo a codo con nuestros clientes en cada momento.</div>
+    <svg class="vg" viewBox="0 0 620 520">
+      <circle id="c2a" cx="120" cy="260" r="120" fill="rgba(246,160,26,.35)" stroke="#fff" stroke-width="14"/>
+      <circle id="c2b" cx="500" cy="260" r="120" fill="rgba(227,38,45,.35)" stroke="#fff" stroke-width="14"/>
+    </svg>
+  </div>
+
+  <div class="vb" id="v2">
+    <div class="vnum eyebrow" style="font-size:34px">03 / 05</div>
+    <div class="vn H vnm">Dinamismo</div>
+    <div class="vs vsx">Respuestas rápidas y eficientes que potencian tu negocio.</div>
+    <svg class="vg" viewBox="0 0 620 520">
+      <rect id="b0" x="10" y="60"  width="0" height="44" fill="#fff"/>
+      <rect id="b1" x="10" y="122" width="0" height="44" fill="#fff"/>
+      <rect id="b2" x="10" y="184" width="0" height="44" fill="#fff"/>
+      <rect id="b3" x="10" y="246" width="0" height="44" fill="#fff"/>
+      <rect id="b4" x="10" y="308" width="0" height="44" fill="#fff"/>
+      <rect id="b5" x="10" y="370" width="0" height="44" fill="#fff"/>
+      <rect id="b6" x="10" y="432" width="0" height="44" fill="#f6a01a"/>
+    </svg>
+  </div>
+
+  <div class="vb" id="v3">
+    <div class="vnum eyebrow" style="font-size:34px">04 / 05</div>
+    <div class="vn H vnm">Confianza</div>
+    <div class="vs vsx">Acompañamos al cliente durante todo el proceso, con tranquilidad y seguridad.</div>
+    <svg class="vg" viewBox="0 0 620 520">
+      <g id="ck" style="transform-box:view-box;transform-origin:310px 260px">
+        <circle cx="310" cy="260" r="170" fill="none" stroke="#fff" stroke-width="14"/>
+        <path id="ckp" d="M220 270 L285 335 L410 200" fill="none" stroke="#f6a01a" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="280" stroke-dashoffset="280"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="vb" id="v4">
+    <div class="vnum eyebrow" style="font-size:34px">05 / 05</div>
+    <div class="vn H vnm">Experiencia</div>
+    <div class="vs vsx">Más de 30 años de experiencia en el sector, creatividad y partners especializados.</div>
+    <svg class="vg" viewBox="0 0 620 520">
+      <text id="num5" x="310" y="270" text-anchor="middle" font-family="Inter" font-weight="900" font-size="250" fill="#f6a01a">0</text>
+      <text x="310" y="340" text-anchor="middle" font-family="Inter" font-weight="800" font-size="50" letter-spacing="10" fill="#fff">AÑOS</text>
+      <g id="sq"></g>
+    </svg>
+  </div>
+
+  <div class="a" id="s4bar" style="left:120px;bottom:70px;height:6px;width:0;background:#f6a01a"></div>
+</section>
+
+<!-- ESCENA 5 · EJECUCIÓN -->
+<section class="scene grid" id="s5" style="background:#0f0d0e">
+  <div class="a H" id="s5a" style="left:120px;top:170px;font-size:84px;opacity:0">De la idea</div>
+  <div class="a H" id="s5b" style="left:120px;top:262px;font-size:84px;color:#f6a01a;opacity:0">al montaje.</div>
+  <div class="a" style="left:120px;top:440px;font-size:30px;font-weight:700;letter-spacing:.2em;color:#fff;opacity:.6">PROCESO</div>
+  <div class="a" id="st0" style="left:120px;top:500px;font-size:44px;font-weight:800;text-transform:uppercase">01 · Diseño 3D</div>
+  <div class="a" id="st1" style="left:120px;top:572px;font-size:44px;font-weight:800;text-transform:uppercase">02 · Producción</div>
+  <div class="a" id="st2" style="left:120px;top:644px;font-size:44px;font-weight:800;text-transform:uppercase">03 · Montaje</div>
+  <div class="a" id="st3" style="left:120px;top:716px;font-size:44px;font-weight:800;text-transform:uppercase">04 · Eventos</div>
+  <div class="a" id="s5c" style="left:120px;top:870px;font-size:36px;font-weight:600;color:#f6a01a;opacity:0">Instalación y montaje en toda España</div>
+  <div class="ph" id="s5p0" style="left:840px;top:200px;width:960px;height:600px;display:none"><img src="../assets/img/stand-r-franco.webp" alt=""></div>
+  <div class="ph" id="s5p1" style="left:840px;top:200px;width:960px;height:600px;display:none"><img src="../assets/img/impresion.webp" alt=""></div>
+  <div class="ph" id="s5p2" style="left:840px;top:200px;width:960px;height:600px;display:none"><img src="../assets/img/stand-feria.webp" alt=""></div>
+  <div class="ph" id="s5p3" style="left:840px;top:200px;width:960px;height:600px;display:none"><img src="../assets/img/eventos.webp" alt=""></div>
+</section>
+
+<!-- ESCENA 6 · EQUIPO -->
+<section class="scene" id="s6" style="background:#efeeec;color:#1d1d1f">
+  <div class="a H" id="s6a" data-split style="left:120px;top:250px;width:1000px;white-space:normal;font-size:84px">No solo desarrollamos proyectos.</div>
+  <div class="a H" id="s6b" data-split style="left:120px;top:560px;width:1000px;white-space:normal;font-size:84px;color:#e3262d">Construimos relaciones y hacemos que las ideas sucedan.</div>
+  <div class="a" id="s6c" style="left:120px;top:940px;font-size:34px;color:#5b5b60;opacity:0">Cada proyecto, un equipo detrás.</div>
+  <div class="ph" id="s6p1" style="left:1180px;top:170px;width:560px;height:360px;clip-path:inset(0 0 100% 0)"><img src="../assets/img/diseno.webp" alt=""></div>
+  <div class="ph" id="s6p2" style="left:1320px;top:520px;width:500px;height:300px;clip-path:inset(0 100% 0 0)"><img src="../assets/img/audiovisual.webp" alt=""></div>
+  <div class="ph" id="s6p3" style="left:1200px;top:830px;width:580px;height:200px;clip-path:inset(0 0 0 100%)"><img src="../assets/img/merchandising.webp" alt=""></div>
+</section>
+
+<!-- ESCENA 7 · CIERRE -->
+<section class="scene" id="s7" style="background:radial-gradient(circle at 50% 35%,#6b0f12 0%,#0d0a0b 75%)">
+  <svg class="a" id="lgo" style="left:810px;top:110px" width="300" height="300" viewBox="0 0 40 40">
+    <g id="lg0" transform="translate(-56 -35)"><path d="M4 12 14 6l10 6-10 6z" fill="#c9c9cc"/></g>
+    <g id="lg1" transform="translate(56 -27)"><path d="M4 12v12l10 6V18z" fill="#9a9a9f"/></g>
+    <g id="lg2" transform="translate(-40 50)"><path d="M14 18v12l10-6V12z" fill="#e3262d"/></g>
+    <g id="lg3" transform="translate(50 42)"><path d="m24 12 12-6v12l-12 6z" fill="#b51c22"/></g>
+  </svg>
+  <div class="a" id="s7g" style="left:0;width:1920px;top:452px;text-align:center;font-size:54px;font-weight:700;letter-spacing:.5em;color:#c9c9cc;text-indent:.5em;opacity:0">GRUPO</div>
+  <div class="a H" id="s7d" style="left:0;width:1920px;top:510px;text-align:center;font-size:210px;font-weight:900;color:#e3262d;clip-path:inset(0 100% 0 0)">Dynamic</div>
+  <div class="a" id="s7t1" style="left:0;width:1920px;top:800px;text-align:center;font-size:58px;font-weight:600;opacity:0">Tus ideas. Nuestro compromiso.</div>
+  <div class="a" id="s7t2" style="left:0;width:1920px;top:872px;text-align:center;font-size:58px;font-weight:700;color:#f6a01a;opacity:0">Juntos, hacemos que sucedan.</div>
+  <div class="a" id="s7u" style="left:0;width:1920px;top:975px;text-align:center;font-size:38px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.85);opacity:0">www.grupodynamic.es</div>
+</section>
+
+<div id="wipe"></div>
+<div id="fade"></div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const cl=x=>x<0?0:x>1?1:x;
+const P=(t,a,d)=>cl((t-a)/d);
+const E=x=>1-Math.pow(1-x,3);
+const EB=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const set=(el,o)=>{for(const k in o) el.style[k]=o[k]};
+const SVGNS='http://www.w3.org/2000/svg';
+
+// Divide en palabras los elementos marcados con data-split
+document.querySelectorAll('[data-split]').forEach(el=>{
+  const words=el.textContent.trim().split(/\s+/);
+  el.innerHTML='';
+  words.forEach(w=>{const s=document.createElement('span');s.className='w';s.textContent=w;s.style.opacity=0;s.style.display='inline-block';el.appendChild(s);});
+});
+// Cuadrícula de 30 cuadros para la escena de experiencia
+(function(){const g=$('sq');for(let i=0;i<30;i++){const r=document.createElementNS(SVGNS,'rect');const row=Math.floor(i/15),col=i%15;r.setAttribute('x',70+col*32);r.setAttribute('y',400+row*40);r.setAttribute('width',24);r.setAttribute('height',24);r.setAttribute('fill','#fff');r.setAttribute('opacity',0);g.appendChild(r);}})();
+
+function wordsAnim(id,l,start,step,dur){
+  const kids=$(id).children;
+  for(let i=0;i<kids.length;i++){const p=E(P(l,start+i*step,dur));kids[i].style.opacity=p;kids[i].style.transform=`translateY(${(1-p)*60}px)`;}
+}
+function show(id,a,b,t){const el=$(id);const on=t>=a&&t<b;el.style.display=on?'block':'none';return on?t-a:-1;}
+
+/* ---------- Escenas ---------- */
+function f1(l){
+  $('s1e').style.opacity=P(l,.1,.6);
+  let p=E(P(l,.3,.9)); set($('s1a'),{opacity:p,transform:`translateY(${(1-p)*80}px)`});
+  p=E(P(l,1.2,.8)); $('s1b').style.clipPath=`inset(0 ${(1-p)*100}% 0 0)`;
+  $('s1l').style.transform=`scaleX(${E(P(l,.8,1.2))})`;
+  const m=EB(P(l,4.2,.9)); set($('s1m'),{transform:`scale(${Math.max(0,m)})`,opacity:P(l,4.2,.3)});
+  p=E(P(l,6,.8)); set($('s1s'),{opacity:p,transform:`translateY(${(1-p)*30}px)`});
+}
+
+function f2(l){
+  $('s2e').style.opacity=P(l,.1,.5);
+  wordsAnim('s2h',l,.4,.12,.5);
+  let p=E(P(l,.8,1)); $('s2p1').style.clipPath=`inset(${(1-p)*100}% 0 0 0)`;
+  p=E(P(l,1.6,.9)); $('s2p2').style.clipPath=`inset(0 ${(1-p)*100}% 0 0)`;
+  p=E(P(l,2.2,.9)); $('s2p3').style.clipPath=`inset(0 0 ${(1-p)*100}% 0)`;
+  $('s2n').textContent=Math.round(30*E(P(l,2.5,1.6)));
+  $('s2l').style.opacity=P(l,2.5,.8);
+}
+
+function f3(l){
+  const a=E(P(l,.2,1.2)), d=E(P(l,.2,1.2));
+  set($('s3A'),{opacity:P(l,.2,.5),transform:`translateX(${(1-a)*-900}px)`});
+  set($('s3D'),{opacity:P(l,.2,.5),transform:`translateX(${(1-d)*900}px)`});
+  const pl=EB(P(l,1.2,.6)); $('s3p').style.transform=`scale(${Math.max(0,pl)})`;
+  const up=E(P(l,3.0,.8)); $('s3r').style.transform=`translateY(${-up*120}px)`;
+  const m=P(l,3.6,.8); set($('s3m'),{opacity:E(m),transform:`translateY(${(1-E(m))*30}px)`});
+  const chips=$('s3').querySelectorAll('.chip');
+  chips.forEach((c,i)=>{const q=E(P(l,5+i*.22,.5));c.style.opacity=q;c.style.transform=`translateY(${(1-q)*40}px)`;});
+}
+
+const VW=[0,1,2,3,4];
+function f4(l){
+  const k=Math.min(4,Math.floor(l/3.2)); const u=l-k*3.2;
+  VW.forEach(i=>$('v'+i).style.display=i===k?'block':'none');
+  const B=$('v'+k);
+  const nm=B.querySelector('.vnm'), sx=B.querySelector('.vsx');
+  const q=E(P(u,.1,.5)); set(nm,{opacity:q,transform:`translateY(${(1-q)*50}px)`});
+  sx.style.opacity=P(u,.5,.6);
+  $('s4bar').style.width=(1520*(l/16))+'px';
+  if(k===0){
+    const C=2*Math.PI*200; const p=E(P(u,.3,2.0));
+    $('c1').setAttribute('stroke-dashoffset',C*(1-p));
+    $('t1').textContent=Math.round(100*p)+'%';
+  } else if(k===1){
+    const p=E(P(u,.2,1.4));
+    $('c2a').setAttribute('cx',120+120*p);
+    $('c2b').setAttribute('cx',500-120*p);
+  } else if(k===2){
+    const W=[260,380,320,460,400,520,600];
+    for(let i=0;i<7;i++){const p=E(P(u,.1+i*.12,.7));$('b'+i).setAttribute('width',W[i]*p);}
+  } else if(k===3){
+    const p=E(P(u,.1,.7));
+    $('ck').style.transform=`scale(${Math.max(0,EB(P(u,.1,.7)))})`;
+    $('ckp').setAttribute('stroke-dashoffset',280*(1-P(u,.7,.6)));
+  } else {
+    $('num5').textContent=Math.round(30*E(P(u,.2,1.6)));
+    const sq=$('sq').children;
+    for(let i=0;i<sq.length;i++) sq[i].setAttribute('opacity',P(u,1.0+i*.05,.15));
+  }
+}
+
+const STEPS=[.8,3.8,6.8,9.8];
+function f5(l){
+  let p=E(P(l,.2,.7)); set($('s5a'),{opacity:p,transform:`translateY(${(1-p)*40}px)`});
+  p=E(P(l,.6,.7)); set($('s5b'),{opacity:p,transform:`translateY(${(1-p)*40}px)`});
+  let cur=0; for(let i=0;i<4;i++) if(l>=STEPS[i]) cur=i;
+  for(let i=0;i<4;i++){const el=$('st'+i); el.style.color=i===cur?'#f6a01a':'rgba(255,255,255,.35)';}
+  for(let i=0;i<4;i++){
+    const el=$('s5p'+i); el.style.display=i===cur?'block':'none';
+    if(i===cur){const u=l-STEPS[i];const r=E(P(u,0,.7));
+      el.style.clipPath=`inset(0 ${(1-r)*100}% 0 0)`;
+      el.querySelector('img').style.transform=`scale(${1.12-0.12*P(u,0,3.2)})`;
+      el.querySelector('img').style.transformOrigin='center';
+    }
+  }
+  $('s5c').style.opacity=P(l,11,.8);
+}
+
+function f6(l){
+  wordsAnim('s6a',l,.3,.07,.5);
+  wordsAnim('s6b',l,1.5,.05,.5);
+  let p=E(P(l,.2,1)); $('s6p1').style.clipPath=`inset(0 0 ${(1-p)*100}% 0)`; $('s6p1').style.transform=`translateY(${-l*5}px)`;
+  p=E(P(l,.6,1)); $('s6p2').style.clipPath=`inset(0 ${(1-p)*100}% 0 0)`; $('s6p2').style.transform=`translateY(${l*4}px)`;
+  p=E(P(l,1.0,1)); $('s6p3').style.clipPath=`inset(0 0 0 ${(1-p)*100}%)`; $('s6p3').style.transform=`translateY(${-l*3}px)`;
+  $('s6c').style.opacity=P(l,6,.8);
+}
+
+const LG_OFF=[[-56,-35],[56,-27],[-40,50],[50,42]];
+function f7(l){
+  for(let i=0;i<4;i++){
+    const p=E(P(l,.2+i*.12,1.1));
+    $('lg'+i).setAttribute('transform',`translate(${LG_OFF[i][0]*(1-p)} ${LG_OFF[i][1]*(1-p)})`);
+  }
+  $('s7g').style.opacity=P(l,1.6,.8);
+  $('s7d').style.clipPath=`inset(0 ${(1-E(P(l,2.0,.9)))*100}% 0 0)`;
+  let p=E(P(l,3.0,.8)); set($('s7t1'),{opacity:p,transform:`translateY(${(1-p)*24}px)`});
+  p=E(P(l,4.6,.8)); set($('s7t2'),{opacity:p,transform:`translateY(${(1-p)*24}px)`});
+  $('s7u').style.opacity=P(l,6.8,.9);
+  $('fade').style.opacity=P(l,10.8,1.2);
+}
+
+/* ---------- Motor ---------- */
+function renderAt(ms){
+  const t=ms/1000;
+  let l;
+  l=show('s1',0,9.5,t);   if(l>=0) f1(l);
+  l=show('s2',9.5,17.5,t);if(l>=0) f2(l);
+  l=show('s3',17.5,27.5,t);if(l>=0) f3(l);
+  l=show('s4',27.5,43.5,t);if(l>=0) f4(l);
+  l=show('s5',43.5,57,t); if(l>=0) f5(l);
+  l=show('s6',57,66,t);   if(l>=0) f6(l);
+  l=show('s7',66,78,t);   if(l>=0) f7(l);
+  // Transiciones: barrido rojo centrado en cada corte
+  const B=[9.5,17.5,27.5,43.5,57,66]; let wq=null;
+  for(const b of B){const q=(t-(b-.4))/.8; if(q>=0&&q<=1){wq=q;break;}}
+  const w=$('wipe');
+  if(wq===null) w.style.display='none';
+  else {w.style.display='block';w.style.transform=`translateX(${-100+200*wq}%)`;}
+}
+window.renderAt=renderAt;
+renderAt(0);
+</script>
+</body>
+</html>
